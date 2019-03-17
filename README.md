@@ -1,4 +1,4 @@
-# Data Lovers
+# Word Bank
 
 ## Índice
 
