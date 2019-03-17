@@ -8,8 +8,6 @@
 </head>
 
 <body>
-  <script src="data/worldbank/worldbank.js"></script>
-  <script src="data.js"></script>
   <div class="container">
     <header class="titulo texto">Data Lovers</header>
     <nav class="box menu texto ">
@@ -23,14 +21,7 @@
           <h2 >¿QUE INFORMACIÓN DESEA VER?</h2><hr>
           <form class="form1">
                 <h3 class="label1 columAll">Indicadores:</h3>
-                <select id="lista" class="list_indicadores columAll">
-                  <script type="text/javascript">
-                    let arreglo = Funciones.arrayOfIndicators("PER");
-                    for (let x = 0; x < arreglo.length; x++) {
-                      document.write("<option>" + arreglo[x] + "</option>");
-                    }
-                  </script>
-                </select>
+                <select id="lista" class="list_indicadores columAll"></select>
             <div class="opciones cuadro columAll">
                 <h3 class="label2 columAll">Selecciona un Pais:</h3>
                 <input type="checkbox" name="pais.select" id="input_Per" value="0" class="pais "/>Perú
@@ -40,12 +31,13 @@
             </div>
             <button class="filtrar" id=filtrarX>Filtrar</button>
             <button class="clear">Limpiar</button>
+
             <div class="date cuadro columAll"> 
               <h3 class="label3 columAll">Seleccione los años:</h3>        
               <label class="from colum1">Desde:</label>
-              <select id="" class="fromAges colum2"></select>
+              <select id="Age-1" class="fromAges colum2"></select>
               <label class="to colum1">Hasta:</label>
-              <select id="" class="toAges colum2"></select>
+              <select id="Age-2" class="toAges colum2"></select>
             </div>
           </form>
     </aside>
@@ -61,7 +53,8 @@
   <!-- <script src="./data/steam/steam.js"></script> -->
   <!-- <script src="./data/worldbank/worldbank.js"></script> -->
   <!-- <script src="./data/lol/lol.js"></script> -->
-
+  <script src="data/worldbank/worldbank.js"></script>
+  <script src="data.js"></script>
   <script src="main.js"></script>
 
 </body>
