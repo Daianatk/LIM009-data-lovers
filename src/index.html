@@ -1,5 +1,61 @@
 <!DOCTYPE html>
 <html>
+
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="titulo texto">Data Lovers</header>
+    <nav class="box menu texto ">
+      <div>
+        <li class="item One "><a href="">Home</a></li>
+        <li class="item Two"><a href="">Datos</a></li>
+        <li class="item Three"><a href="">News</a></li>
+      </div>
+    </nav>
+    <aside class="box left texto">
+          <h2 >¿QUE INFORMACIÓN DESEA VER?</h2><hr>
+          <form class="form1">
+                <h3 class="label1 columAll">Indicadores:</h3>
+                <select id="lista" class="list_indicadores columAll"></select>
+            <div class="opciones cuadro columAll">
+                <h3 class="label2 columAll">Selecciona un Pais:</h3>
+                <input type="checkbox" name="pais.select" id="input_Per" value="0" class="pais "/>Perú
+                <input type="checkbox" name="pais.select" id="input_Mex" value="1" class="pais "/>México
+                <input type="checkbox" name="pais.select" id="input_Bra" value="2" class="pais "/>Brasil
+                <input type="checkbox" name="pais.select" id="input_Chl" value="3" class="pais "/>Chile
+            </div>
+            <button class="filtrar" id=filtrarX>Filtrar</button>
+            <button class="clear">Limpiar</button>
+
+            <div class="date cuadro columAll"> 
+              <h3 class="label3 columAll">Seleccione los años:</h3>        
+              <label class="from colum1">Desde:</label>
+              <select id="Age-1" class="fromAges colum2"></select>
+              <label class="to colum1">Hasta:</label>
+              <select id="Age-2" class="toAges colum2"></select>
+            </div>
+          </form>
+    </aside>
+    <section class="data texto">
+      <span id="dta_ages"></span>
+    </section>
+    <aside class="box right texto">Right</aside>
+    <footer class="box pie texto">Pie de pagina</footer>
+  </div>
+  <script src="data/worldbank/worldbank.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
+
   <head>
     <meta charset="utf-8">
     <title>World Bank</title>
@@ -12,3 +68,4 @@
     <script src="main.js"></script>
   </body>
 </html>
+
