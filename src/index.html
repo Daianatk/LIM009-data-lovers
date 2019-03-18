@@ -18,30 +18,35 @@
       </div>
     </nav>
     <aside class="box left texto">
-          <h2 >¿QUE INFORMACIÓN DESEA VER?</h2><hr>
-          <form class="form1">
-                <h3 class="label1 columAll">Indicadores:</h3>
-                <select id="lista" class="list_indicadores columAll"></select>
-            <div class="opciones cuadro columAll">
-                <h3 class="label2 columAll">Selecciona un Pais:</h3>
-                <input type="checkbox" name="pais.select" id="input_Per" value="0" class="pais "/>Perú
-                <input type="checkbox" name="pais.select" id="input_Mex" value="1" class="pais "/>México
-                <input type="checkbox" name="pais.select" id="input_Bra" value="2" class="pais "/>Brasil
-                <input type="checkbox" name="pais.select" id="input_Chl" value="3" class="pais "/>Chile
-            </div>
-            <button class="filtrar" id=filtrarX>Filtrar</button>
-            <button class="clear">Limpiar</button>
+      <h2>¿QUE INFORMACIÓN DESEA VER?</h2>
+      <hr>
+      <form class="form1">
+        <h3 class="label1 columAll">Indicadores:</h3>
+        <select id="List" class="list_indicadores columAll" onchange="filter()">
+        <!--<option value="" disabled selected>--Seleccione un indicardor--</option>-->
+        </select>
 
-            <div class="date cuadro columAll"> 
-              <h3 class="label3 columAll">Seleccione los años:</h3>        
-              <label class="from colum1">Desde:</label>
-              <select id="Age-1" class="fromAges colum2"></select>
-              <label class="to colum1">Hasta:</label>
-              <select id="Age-2" class="toAges colum2"></select>
-            </div>
-          </form>
+        <div class="opciones cuadro columAll">
+          <h3 class="label2 columAll">Selecciona un Pais:</h3>
+          <input type="checkbox" name="pais.select" id="input_Per" value="0" class="pais " />Perú
+          <input type="checkbox" name="pais.select" id="input_Mex" value="1" class="pais " />México
+          <input type="checkbox" name="pais.select" id="input_Bra" value="2" class="pais " />Brasil
+          <input type="checkbox" name="pais.select" id="input_Chl" value="3" class="pais " />Chile
+        </div>
+        <button class="filtrar" id="filtrarX" onclick="filter">Filtrar</button>
+        <button class="clear">Limpiar</button>
+
+        <div class="date cuadro columAll">
+          <h3 class="label3 columAll">Seleccione los años:</h3>
+          <label class="from colum1">Desde:</label>
+          <select id="Age-1" class="fromAges colum2"></select>
+          <label class="to colum1">Hasta:</label>
+          <select id="Age-2" class="toAges colum2"></select>
+        </div>
+      </form>
     </aside>
     <section class="data texto">
+        <p id="demo"></p>
       <span id="dta_ages"></span>
     </section>
     <aside class="box right texto">Right</aside>

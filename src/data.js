@@ -18,29 +18,28 @@ window.Funciones = {
     return array;
   },
 
-  arrayOfdata: (country,indicador)=>{
-    let contries=Object.keys(WORLDBANK);
-    let datos2="";
-      for(let m=0;m<contries.length;m++){
-        if(contries[m]==country){
-        datos2=WORLDBANK[contries[m]];
+  arrayOfdata: (country, indicador) => {
+       let contries = Object.keys(WORLDBANK);
+      let datos2 = "";
+      for (let m = 0; m < contries.length; m++) {
+        if (contries[m] == country) {
+          datos2 = WORLDBANK[contries[m]];
         }
       };
-    let arrayOfcontry=Object.keys(datos2);
-    let indicadores=datos2.indicators;
-    let objectsOfarray="";
-    let datos_2="";
-    let arrayFinal=[];
-    for(let i=0;i<indicadores.length;i++){
-      objectsOfarray=indicadores[i];
-        if(objectsOfarray.indicatorName==indicador){
-        datos_2= objectsOfarray.data;
+      let arrayOfcontry = Object.keys(datos2);
+      let indicadores = datos2.indicators;
+      let objectsOfarray = "";
+      let datos_2 = "";
+      let arrayFinal = [];
+      for (let i = 0; i < indicadores.length; i++) {
+        objectsOfarray = indicadores[i];
+        if (objectsOfarray.indicatorName == indicador) {
+          datos_2 = objectsOfarray.data;
         }
-//arrayFinal=
-    };
-       return JSON.stringify(datos_2);
-  },
-};
+      };
+      return JSON.stringify(datos_2);
+    }
+  };
 /*const example = () => {
   return 'example';
 };

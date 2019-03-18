@@ -1,9 +1,9 @@
-selectIndicators = document.getElementById("lista");
+selectIndicators = document.getElementById("List");
 let arreglo = Funciones.arrayOfIndicators("PER");
 for (let x = 0; x < arreglo.length; x++) {
-    option=document.createElement("option");
-    option.value=arreglo[x];
-    option.text=arreglo[x];
+    option = document.createElement("option");
+    option.value = arreglo[x];
+    option.text = arreglo[x];
     selectIndicators.appendChild(option);
 };
 select = document.getElementById("Age-1");
@@ -20,11 +20,13 @@ for (let n = 1961; n <= 2017; n++) {
     option.text = n;
     selectTwo.appendChild(option);
 };
-
-/*const mostrar=document.getElementById("datos");
-let abc=Funciones.arrayOfIndicators("PER");
-mostrar.innerHTML=abc;
-
-const showSection=document.getElementById("dta_ages");
-let showData=Funciones.arrayOfdata("MEX","Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)");
+const filter=()=>{
+    let indicatorSelected =document.getElementById('List').value;
+    let writeTitle=document.getElementById("demo")
+    writeTitle.innerHTML = "You selected: " + indicatorSelected;
+    return indicatorSelected;
+    //console.log(indicatorSelected);
+};
+/*const showSection=document.getElementById("dta_ages");
+let showData=Funciones.arrayOfdata("MEX",filter());
 showSection.innerHTML=showData;*/
