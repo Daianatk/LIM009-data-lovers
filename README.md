@@ -27,11 +27,6 @@ Estos son datos que te proponemos:
   de algunos países (Brasil, Chile, México y Perú). Estos datos incluyen
   indicadores demográficos, económicos y comerciales.
 
-## Prototipo en Figma
-
-![image]()
-
-
 ### Definición del producto
 
 Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
@@ -40,41 +35,24 @@ el problema (o problemas) que tiene tu usuario.
 
 ### Historias de usuario
 
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
+1. Los estudiantes de estadisticas de la Universidad UCP. Requieren revisar la informacion estadistica filtrada por años en los sectores: Sociales, laborales y Educativos para los siguientes paises: Perú, México, Chile y Brasil.Esta informacion ayudara para sus respectivos trabajos de investigacion asignados en clase. La informacion solicitada debera estar mostrada dentro de una tabla y a su vez dentro de un cuadro estadistico lineal.
 
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
-
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
+2. El personal de la ONG llamada Vida, requiere informacion estadistica filtrada por años en los sectores: Sociales, laborales y Educativos para los siguientes paises: Perú, México, Chile y Brasil. Dicha informacion ayudará para la investigacion a profundidad de estos sectores y sera su base de investigación.La informacion solicitada debera estar mostrada dentro de una tabla y a su vez dentro de un cuadro estadistico lineal. Para su mejor comprensión.
 
 ### Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
 
-Durante tu trabajo deberás haber hecho e iterado sketches (boceto) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, las subas a tu repositorio, y las menciones en tu
-`README.md`.
+![image](https://github.com/Daianatk/LIM009-data-lovers/blob/master/src/img/prototipo-bajafidelidad-dataworldbank.JPG)
+Prototipo de Baja Fidelidad realizado en Excel.
 
 #### Prototipo de alta fidelidad
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc. Recuerda utilizar la identidad
-gráfica correspondiente a cada set de datos que elijas.
+![image](https://github.com/Daianatk/LIM009-data-lovers/blob/master/src/img/figma-mobile-dataworldbank.JPG)
+Prototipo de Alta Fidelidad realizado en Figma para Mobile.
 
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para hackear. Además, tu
-diseño debe seguir los fundamentos de _visual design_. También, deberás exportar
-tu diseño a [Zeplin](https://zeplin.io/) y utilizar las especificaciones de
-estilo que te dé Zeplin al momento de implementar tus diseños en código.
+![image](https://github.com/Daianatk/LIM009-data-lovers/blob/master/src/img/figma-desktop-dataworldbank.JPG)
+Prototipo de Alta Fidelidad realizado en Figma para Desktop.
 
 #### Testeos de usabilidad
 
