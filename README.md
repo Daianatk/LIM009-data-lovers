@@ -45,9 +45,11 @@ Prototipo de Baja Fidelidad realizado en Excel.
 ![image](https://github.com/Daianatk/LIM009-data-lovers/blob/master/src/img/figma-mobile-dataworldbank.JPG)
 
 Prototipo de Alta Fidelidad realizado en Figma para Mobile.
+Link en Zeplin: https://zpl.io/2GyXRgm
 
 ![image](https://github.com/Daianatk/LIM009-data-lovers/blob/master/src/img/figma-desktop-dataworldbank.JPG)
 Prototipo de Alta Fidelidad realizado en Figma para Desktop.
+Link en Zeplin: https://zpl.io/bJ7XxN3
 
 #### Testeos de usabilidad
 
@@ -112,9 +114,9 @@ Features/características extra sugeridas:
 * [-] Incluye historias de usuario en `README.md`.
 * [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
   `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
+* [-] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
-* [ ] Incluye link a Zeplin en `README.md`.
+* [-] Incluye link a Zeplin en `README.md`.
 * [ ] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
 * [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
