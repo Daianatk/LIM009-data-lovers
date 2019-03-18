@@ -6,16 +6,10 @@
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
+<header class="titulo texto"><img src="logoperu.jpg" class="img"/><h1>DATA WORLD BANK</h1></header>
 <body>
   <div class="container">
-    <header class="titulo texto">Data Lovers</header>
     <nav class="box menu texto ">
-      <div>
-        <li class="item One "><a href="">Home</a></li>
-        <li class="item Two"><a href="">Datos</a></li>
-        <li class="item Three"><a href="">News</a></li>
-      </div>
     </nav>
     <aside class="box left texto">
       <h2>¿QUE INFORMACIÓN DESEA VER?</h2>
@@ -23,18 +17,18 @@
       <form class="form1">
         <h3 class="label1 columAll">Indicadores:</h3>
         <select id="List" class="list_indicadores columAll" onchange="filter()">
-        <!--<option value="" disabled selected>--Seleccione un indicardor--</option>-->
-        </select>
+        <option value="" disabled selected>--Seleccione un indicardor--</option>
+      </select>
 
         <div class="opciones cuadro columAll">
           <h3 class="label2 columAll">Selecciona un Pais:</h3>
-          <input type="checkbox" name="pais.select" id="input_Per" value="0" class="pais " />Perú
-          <input type="checkbox" name="pais.select" id="input_Mex" value="1" class="pais " />México
-          <input type="checkbox" name="pais.select" id="input_Bra" value="2" class="pais " />Brasil
-          <input type="checkbox" name="pais.select" id="input_Chl" value="3" class="pais " />Chile
+          <input type="checkbox" name="pais.select" id="input_Per" value="PER" class="pais " />Perú
+          <input type="checkbox" name="pais.select" id="input_Mex" value="MEX" class="pais " />México
+          <input type="checkbox" name="pais.select" id="input_Bra" value="BRA" class="pais " />Brasil
+          <input type="checkbox" name="pais.select" id="input_Chl" value="CHL" class="pais " />Chile
         </div>
-        <button class="filtrar" id="filtrarX" onclick="filter">Filtrar</button>
-        <button class="clear">Limpiar</button>
+        <button type="button" class="filtrar" id="filtrarX" onclick="datosInsection()">FILTRAR</button>
+        <button class="clear" id="borrar">Limpiar</button>
 
         <div class="date cuadro columAll">
           <h3 class="label3 columAll">Seleccione los años:</h3>
@@ -45,13 +39,12 @@
         </div>
       </form>
     </aside>
-    <section class="data texto">
-        <p id="demo"></p>
-      <span id="dta_ages"></span>
+    <section class="data texto" id="sectionDta">
+      <p id="demo"></p>
+      <div type="table" id="dta_ages"></div>
     </section>
-    <aside class="box right texto">Right</aside>
-    <footer class="box pie texto">Pie de pagina</footer>
   </div>
+  <footer class="box pie texto">Pie de pagina</footer>
   <!--  <div id="root"></div>-->
   <!-- <script src="./data/injuries/injuries.js"></script> -->
   <!-- <script src="./data/pokemon/pokemon.js"></script> -->

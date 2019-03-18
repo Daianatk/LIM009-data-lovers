@@ -20,13 +20,43 @@ for (let n = 1961; n <= 2017; n++) {
     option.text = n;
     selectTwo.appendChild(option);
 };
-const filter=()=>{
-    let indicatorSelected =document.getElementById('List').value;
-    let writeTitle=document.getElementById("demo")
+
+function filter(){
+    let indicatorSelected = document.getElementById('List').value;
+    const writeTitle = document.getElementById("demo");
     writeTitle.innerHTML = "You selected: " + indicatorSelected;
-    return indicatorSelected;
-    //console.log(indicatorSelected);
 };
-/*const showSection=document.getElementById("dta_ages");
-let showData=Funciones.arrayOfdata("MEX",filter());
-showSection.innerHTML=showData;*/
+
+/*const filterPais=()=>{
+    let countrySelected=document.getElementsByName("pais.select").value;
+    console.log(countrySelected);
+}
+const dtaShow = document.getElementById('filtrarX');
+dtaShow.addEventListener("click", datosInsection);*/
+function datosInsection(){
+   let indicatorSelected2 = document.getElementById('List').value;
+    const showSection = document.getElementById("dta_ages");
+    let showData = Funciones.arrayOfdata("PER", indicatorSelected2);
+    let arrayData = Object.keys(showData);
+    let mostrar1="";
+
+
+    for(let i = 0; i<arrayData.length; i++){
+        let template = 
+        `<h5> ${arrayData[i]} : ${showData[arrayData[i]]}</h5><br>`
+        mostrar1+=template;
+    }
+    showSection.innerHTML = mostrar1;
+    //mostrar.push(mostrar1);
+   // showSection.innerHTML = mostrar1;
+    //showValue.innerHTML = mostrar;
+    /*return showData;*/
+    console.log(typeof mostrar1);
+};
+
+const clearForm= document.getElementById('borrar');
+clearForm.addEventListener("click", limpiarFormulario);
+
+function limpiarFormulario() {
+    document.getElementById("form1").reset();
+}

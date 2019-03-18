@@ -19,27 +19,36 @@ window.Funciones = {
   },
 
   arrayOfdata: (country, indicador) => {
-       let contries = Object.keys(WORLDBANK);
-      let datos2 = "";
-      for (let m = 0; m < contries.length; m++) {
-        if (contries[m] == country) {
-          datos2 = WORLDBANK[contries[m]];
+    let contries=Object.keys(WORLDBANK);
+    let datos2="";
+      for(let m=0;m<contries.length;m++){
+        if(contries[m]==country){
+        datos2=WORLDBANK[contries[m]];
         }
       };
-      let arrayOfcontry = Object.keys(datos2);
-      let indicadores = datos2.indicators;
-      let objectsOfarray = "";
-      let datos_2 = "";
-      let arrayFinal = [];
-      for (let i = 0; i < indicadores.length; i++) {
-        objectsOfarray = indicadores[i];
-        if (objectsOfarray.indicatorName == indicador) {
-          datos_2 = objectsOfarray.data;
+    let indicadores = datos2.indicators;
+    let objectsOfarray = "";
+    let datos_2 = "";
+    let arrayFinal = []; 
+    for(let i=0;i<indicadores.length;i++){
+      objectsOfarray=indicadores[i];
+        if(objectsOfarray.indicatorName==indicador){
+        datos_2= objectsOfarray.data;
         }
       };
-      return JSON.stringify(datos_2);
+    return datos_2;
+  },
+  paisSelected: () => {
+    const country = document.getElementsByName('pais.select');
+    let seleccion = "";
+    for (let i = 0; i < country.length; i++) {
+      if (country[i].checked == true) {
+        seleccion = country[i].value;
+      }
     }
-  };
+    return seleccion;
+  },
+};
 /*const example = () => {
   return 'example';
 };
