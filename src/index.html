@@ -6,7 +6,10 @@
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<header class="titulo texto"><img src="logoperu.jpg" class="img"/><h1>DATA WORLD BANK</h1></header>
+<header class="titulo texto"><img src="logoperu.jpg" class="img" />
+  <h1>DATA WORLD BANK</h1>
+</header>
+
 <body>
   <div class="container">
     <nav class="box menu texto ">
@@ -17,8 +20,8 @@
       <form class="form1">
         <h3 class="label1 columAll">Indicadores:</h3>
         <select id="List" class="list_indicadores columAll" onchange="filter()">
-        <option value="" disabled selected>--Seleccione un indicardor--</option>
-      </select>
+          <option value="" disabled selected>--Seleccione un indicardor--</option>
+        </select>
 
         <div class="opciones cuadro columAll">
           <h3 class="label2 columAll">Selecciona un Pais:</h3>
@@ -27,7 +30,7 @@
           <input type="checkbox" name="pais.select" id="input_Bra" value="BRA" class="pais " />Brasil
           <input type="checkbox" name="pais.select" id="input_Chl" value="CHL" class="pais " />Chile
         </div>
-        <button type="button" class="filtrar" id="filtrarX" onclick="datosInsection()">FILTRAR</button>
+        <button type="button" class="filtrar" id="filtrarX" onclick="genera_tabla()">FILTRAR</button>
         <button class="clear" id="borrar">Limpiar</button>
 
         <div class="date cuadro columAll">
@@ -41,7 +44,7 @@
     </aside>
     <section class="data texto" id="sectionDta">
       <p id="demo"></p>
-      <div type="table" id="dta_ages"></div>
+      <table type="table" id="dta_ages"></table>
     </section>
   </div>
   <footer class="box pie texto">Pie de pagina</footer>

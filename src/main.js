@@ -21,7 +21,7 @@ for (let n = 1961; n <= 2017; n++) {
     selectTwo.appendChild(option);
 };
 
-function filter(){
+function filter() {
     let indicatorSelected = document.getElementById('List').value;
     const writeTitle = document.getElementById("demo");
     writeTitle.innerHTML = "You selected: " + indicatorSelected;
@@ -33,30 +33,67 @@ function filter(){
 }
 const dtaShow = document.getElementById('filtrarX');
 dtaShow.addEventListener("click", datosInsection);*/
-function datosInsection(){
-   let indicatorSelected2 = document.getElementById('List').value;
+
+/*function datosInsection() {
+    let indicatorSelected2 = document.getElementById('List').value;
     const showSection = document.getElementById("dta_ages");
     let showData = Funciones.arrayOfdata("PER", indicatorSelected2);
     let arrayData = Object.keys(showData);
-    let mostrar1="";
-
-
-    for(let i = 0; i<arrayData.length; i++){
-        let template = 
-        `<h5> ${arrayData[i]} : ${showData[arrayData[i]]}</h5><br>`
-        mostrar1+=template;
+    let mostrar1 = "";
+    for (let i = 0; i < arrayData.length; i++) {
+        let template =
+            `<h5> ${arrayData[i]} : ${showData[arrayData[i]]}</h5><br>`
+        mostrar1 += template;
     }
-    showSection.innerHTML = mostrar1;
-    //mostrar.push(mostrar1);
-   // showSection.innerHTML = mostrar1;
-    //showValue.innerHTML = mostrar;
-    /*return showData;*/
-    console.log(typeof mostrar1);
-};
+    return mostrar1;
+ };*/
+function ArrayOfYears() {
+    let indicatorSelected = document.getElementById('List').value;
+    let showData = Funciones.arrayOfdata("PER", indicatorSelected);
+    let arrayData = Object.keys(showData);
+    let años =[];
+    for (let i = 0; i < arrayData.length; i++) {
+        años.push(arrayData[i]);
+   }
+   return años;
+}
+function ArrayOfYearsValue() {
+    let indicatorSelected2 = document.getElementById('List').value;
+    let showData2 = Funciones.arrayOfdata("PER", indicatorSelected2);
+    let arrayData2 = Object.keys(showData2);
+    let valores =[];
+    for (let i = 0; i < arrayData2.length; i++) {
+        valores.push(showData2[arrayData2[i]]);
+   }
+   return valores;
+}
 
-const clearForm= document.getElementById('borrar');
+const clearForm = document.getElementById('borrar');
 clearForm.addEventListener("click", limpiarFormulario);
 
 function limpiarFormulario() {
     document.getElementById("form1").reset();
+}
+
+function genera_tabla() {
+    const body = document.getElementsByTagName("table")[0];
+    const tabla = document.createElement("table");
+    const tblSection = document.createElement("tsection");
+    let getYears=ArrayOfYears();
+    let getValue=ArrayOfYearsValue();
+
+    for (let i = 15; i < 57; i++) {
+        let hilera = document.createElement("tr");
+
+        for (let j = 0; j < 1; j++) {
+            let celda = document.createElement("td");
+            var textoCelda = document.createTextNode(getYears[i]+':'+getValue[i]);
+            celda.appendChild(textoCelda);
+            hilera.appendChild(celda);
+        }
+        tblSection.appendChild(hilera);
+    }
+    tabla.appendChild(tblSection);
+    body.appendChild(tabla);
+    tabla.setAttribute("border", "1");
 }
