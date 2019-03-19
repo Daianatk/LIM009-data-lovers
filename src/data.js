@@ -44,9 +44,9 @@ window.Funciones = {
     for (let i = 0; i < country.length; i++) {
       if (country[i].checked == true) {
         seleccion = country[i].value;
+        return seleccion;
       }
     }
-    return seleccion;
   },
 };
 /*const example = () => {

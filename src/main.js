@@ -59,7 +59,7 @@ function ArrayOfYears() {
 }
 function ArrayOfYearsValue() {
     let indicatorSelected2 = document.getElementById('List').value;
-    let showData2 = Funciones.arrayOfdata("PER", indicatorSelected2);
+    let showData2 = Funciones.arrayOfdata(Funciones.paisSelected(), indicatorSelected2);
     let arrayData2 = Object.keys(showData2);
     let valores =[];
     for (let i = 0; i < arrayData2.length; i++) {
@@ -82,15 +82,16 @@ function genera_tabla() {
     let getYears=ArrayOfYears();
     let getValue=ArrayOfYearsValue();
 
-    for (let i = 15; i < 57; i++) {
+    for (let i = 0; i < 57; i++) {
         let hilera = document.createElement("tr");
 
         for (let j = 0; j < 1; j++) {
             let celda = document.createElement("td");
-            var textoCelda = document.createTextNode(getYears[i]+':'+getValue[i]);
-            celda.appendChild(textoCelda);
+            var textoCelda = document.createTextNode(getYears[i]+"  :  "+getValue[i]);
             hilera.appendChild(celda);
+            celda.appendChild(textoCelda);
         }
+        
         tblSection.appendChild(hilera);
     }
     tabla.appendChild(tblSection);
