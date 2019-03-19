@@ -51,50 +51,61 @@ function ArrayOfYears() {
     let indicatorSelected = document.getElementById('List').value;
     let showData = Funciones.arrayOfdata("PER", indicatorSelected);
     let arrayData = Object.keys(showData);
-    let años =[];
+    let años = [];
     for (let i = 0; i < arrayData.length; i++) {
         años.push(arrayData[i]);
-   }
-   return años;
-}
+    }
+    return años;
+};
 function ArrayOfYearsValue() {
     let indicatorSelected2 = document.getElementById('List').value;
     let showData2 = Funciones.arrayOfdata(Funciones.paisSelected(), indicatorSelected2);
     let arrayData2 = Object.keys(showData2);
-    let valores =[];
+    let valores = [];
     for (let i = 0; i < arrayData2.length; i++) {
         valores.push(showData2[arrayData2[i]]);
-   }
-   return valores;
-}
+    }
+    return valores;
+};
 
 const clearForm = document.getElementById('borrar');
 clearForm.addEventListener("click", limpiarFormulario);
 
 function limpiarFormulario() {
     document.getElementById("form1").reset();
-}
+};
 
 function genera_tabla() {
     const body = document.getElementsByTagName("table")[0];
     const tabla = document.createElement("table");
+    const tblHeader = document.createElement("theader");
     const tblSection = document.createElement("tsection");
-    let getYears=ArrayOfYears();
-    let getValue=ArrayOfYearsValue();
+    let getYears = ArrayOfYears();
+    let getValue = ArrayOfYearsValue();
+    let getCountry = Funciones.paisSelected();
 
-    for (let i = 0; i < 57; i++) {
+    for (let j = 0; j < 1; j++) {
+        let Trheaders = document.createElement("tr");
+        let headersTable = document.createElement("th");
+        let textHeader = document.createTextNode(getCountry);
+        Trheaders.appendChild(headersTable);
+        tblSection.appendChild(Trheaders);
+        headersTable.appendChild(textHeader);
+    }
+
+    for (let i = 0; i < 58; i++) {
+        if(getValue[i]!==""){
         let hilera = document.createElement("tr");
-
         for (let j = 0; j < 1; j++) {
             let celda = document.createElement("td");
-            var textoCelda = document.createTextNode(getYears[i]+"  :  "+getValue[i]);
-            hilera.appendChild(celda);
+            let textoCelda = document.createTextNode(getYears[i] + "  :  " + getValue[i]);
             celda.appendChild(textoCelda);
+            hilera.appendChild(celda);
         }
-        
         tblSection.appendChild(hilera);
     }
+    };
     tabla.appendChild(tblSection);
+    tabla.appendChild(tblHeader);
     body.appendChild(tabla);
-    tabla.setAttribute("border", "1");
-}
+};
