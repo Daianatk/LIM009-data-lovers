@@ -19,23 +19,23 @@ window.Funciones = {
   },
 
   arrayOfdata: (country, indicador) => {
-    let contries=Object.keys(WORLDBANK);
-    let datos2="";
-      for(let m=0;m<contries.length;m++){
-        if(contries[m]==country){
-        datos2=WORLDBANK[contries[m]];
-        }
-      };
+    let contries = Object.keys(WORLDBANK);
+    let datos2 = "";
+    for (let m = 0; m < contries.length; m++) {
+      if (contries[m] == country) {
+        datos2 = WORLDBANK[contries[m]];
+      }
+    };
     let indicadores = datos2.indicators;
     let objectsOfarray = "";
     let datos_2 = "";
-    let arrayFinal = []; 
-    for(let i=0;i<indicadores.length;i++){
-      objectsOfarray=indicadores[i];
-        if(objectsOfarray.indicatorName==indicador){
-        datos_2= objectsOfarray.data;
-        }
-      };
+    let arrayFinal = [];
+    for (let i = 0; i < indicadores.length; i++) {
+      objectsOfarray = indicadores[i];
+      if (objectsOfarray.indicatorName == indicador) {
+        datos_2 = objectsOfarray.data;
+      }
+    };
     return datos_2;
   },
   paisSelected: () => {

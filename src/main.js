@@ -24,29 +24,8 @@ for (let n = 1961; n <= 2017; n++) {
 function filter() {
     let indicatorSelected = document.getElementById('List').value;
     const writeTitle = document.getElementById("demo");
-    writeTitle.innerHTML = "You selected: " + indicatorSelected;
+    writeTitle.innerHTML = '"' + indicatorSelected + '"';
 };
-
-/*const filterPais=()=>{
-    let countrySelected=document.getElementsByName("pais.select").value;
-    console.log(countrySelected);
-}
-const dtaShow = document.getElementById('filtrarX');
-dtaShow.addEventListener("click", datosInsection);*/
-
-/*function datosInsection() {
-    let indicatorSelected2 = document.getElementById('List').value;
-    const showSection = document.getElementById("dta_ages");
-    let showData = Funciones.arrayOfdata("PER", indicatorSelected2);
-    let arrayData = Object.keys(showData);
-    let mostrar1 = "";
-    for (let i = 0; i < arrayData.length; i++) {
-        let template =
-            `<h5> ${arrayData[i]} : ${showData[arrayData[i]]}</h5><br>`
-        mostrar1 += template;
-    }
-    return mostrar1;
- };*/
 function ArrayOfYears() {
     let indicatorSelected = document.getElementById('List').value;
     let showData = Funciones.arrayOfdata("PER", indicatorSelected);
@@ -94,16 +73,16 @@ function genera_tabla() {
     }
 
     for (let i = 0; i < 58; i++) {
-        if(getValue[i]!==""){
-        let hilera = document.createElement("tr");
-        for (let j = 0; j < 1; j++) {
-            let celda = document.createElement("td");
-            let textoCelda = document.createTextNode(getYears[i] + "  :  " + getValue[i]);
-            celda.appendChild(textoCelda);
-            hilera.appendChild(celda);
+        if (getValue[i] !== "") {
+            let hilera = document.createElement("tr");
+            for (let j = 0; j < 1; j++) {
+                let celda = document.createElement("td");
+                let textoCelda = document.createTextNode(getYears[i] + "  :  " + getValue[i]);
+                celda.appendChild(textoCelda);
+                hilera.appendChild(celda);
+            }
+            tblSection.appendChild(hilera);
         }
-        tblSection.appendChild(hilera);
-    }
     };
     tabla.appendChild(tblSection);
     tabla.appendChild(tblHeader);

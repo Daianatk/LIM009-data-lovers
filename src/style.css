@@ -2,11 +2,14 @@
 margin: 0;
 padding: 0;
 }
+body{
+    font-family: sans-serif;
+}
 .container{
     display: grid;
-    grid-template-rows: 5fr 43fr ;
+    grid-template-rows: 43fr ;
     grid-template-columns: 4fr 8fr;
-    height: 100vh;
+    height: 85vh;
     max-width: 80vw;
     margin: auto;
     color: white;
@@ -26,10 +29,30 @@ h1{
     height: 30px;
 }
 .menu{
-    grid-column: 1/4;
-    grid-template-columns: repeat(3,12fr);
-    background:#1C3B5F;
+    max-width: 80vw;
     border: 2px solid skyblue;
+    margin: auto;
+}
+ul{
+    padding: 0;
+    list-style: none;
+    background: #2e2e2a;
+    line-height: 40px;
+    overflow: auto;
+}
+li{
+    width: 150px;
+    float: right;
+    text-align: center;
+}
+a{
+    display: block;
+    color: white;
+    font-size: 15px;
+}
+a:hover{
+    background: skyblue;
+    color: #0009;  
 }
 .left{
     grid-column: 1/2;

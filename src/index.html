@@ -6,14 +6,20 @@
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<header class="titulo texto"><img src="logoperu.jpg" class="img" />
-  <h1>DATA WORLD BANK</h1>
-</header>
 
 <body>
+  <header class="titulo texto"><img src="logoperu.jpg" class="img" />
+    <h1>DATA WORLD BANK</h1>
+  </header>
+  <nav class="box menu texto ">
+      <ul class="contenido-lista">
+          <li><a>Descargar en xls</a></li> 
+          <li><a>Ver estadísticos</a></li>
+          <li><a>Ver gráfico</a></li>     
+          <li><a>Datos</a></li>  
+      </ul>
+  </nav>
   <div class="container">
-    <nav class="box menu texto ">
-    </nav>
     <aside class="box left texto">
       <h2>¿QUE INFORMACIÓN DESEA VER?</h2>
       <hr>
@@ -25,10 +31,10 @@
 
         <div class="opciones cuadro columAll">
           <h3 class="label2 columAll">Selecciona un Pais:</h3>
-          <input type="checkbox" name="pais.select" id="input_Per" value="PER" class="pais " />Perú
-          <input type="checkbox" name="pais.select" id="input_Mex" value="MEX" class="pais " />México
-          <input type="checkbox" name="pais.select" id="input_Bra" value="BRA" class="pais " />Brasil
-          <input type="checkbox" name="pais.select" id="input_Chl" value="CHL" class="pais " />Chile
+          <input type="checkbox" name="pais.select" id="input_Per" value="PER" class="pais"/>Perú
+          <input type="checkbox" name="pais.select" id="input_Mex" value="MEX" class="pais"/>México
+          <input type="checkbox" name="pais.select" id="input_Bra" value="BRA" class="pais"/>Brasil
+          <input type="checkbox" name="pais.select" id="input_Chl" value="CHL" class="pais"/>Chile
         </div>
         <button type="button" class="filtrar" id="filtrarX" onclick="genera_tabla()">FILTRAR</button>
         <button class="clear" id="borrar">Limpiar</button>
