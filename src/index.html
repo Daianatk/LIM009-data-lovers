@@ -26,18 +26,14 @@
       <hr>
       <form class="form1">
         <h3 class="label1 columAll">Indicadores:</h3>
-        <select id="List" class="list_indicadores columAll" onchange="filter()">
-          <option value="" disabled selected>--Seleccione un indicardor--</option>
+        <select id="List" class="list_indicadores columAll">
         </select>
 
         <div class="opciones cuadro columAll">
           <h3 class="label2 columAll">Selecciona un Pais:</h3>
-          <input type="checkbox" name="pais.select" id="input_Per" value="PER" class="pais" />Perú
-          <input type="checkbox" name="pais.select" id="input_Mex" value="MEX" class="pais" />México
-          <input type="checkbox" name="pais.select" id="input_Bra" value="BRA" class="pais" />Brasil
-          <input type="checkbox" name="pais.select" id="input_Chl" value="CHL" class="pais" />Chile
+          <div id="paises"></div>
         </div>
-        <button type="button" class="filtrar" id="filtrarX" onclick="genera_tabla()">FILTRAR</button>
+        <button type="button" class="filtrar" id="filtrarX" >FILTRAR</button>
         <button class="clear" id="borrar">Limpiar</button>
 
         <div class="date cuadro columAll">

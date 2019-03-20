@@ -18,6 +18,12 @@ window.Funciones = {
     return array;
   },
 
+  getUniqueCountry: (data) => {
+    let arrUniqueCountry = [];
+    arrUniqueCountry = Object.keys(data);
+    return arrUniqueCountry;
+  },
+
   arrayOfdata: (country, indicador) => {
     let contries = Object.keys(WORLDBANK);
     let datos2 = "";
@@ -29,7 +35,6 @@ window.Funciones = {
     let indicadores = datos2.indicators;
     let objectsOfarray = "";
     let datos_2 = "";
-    let arrayFinal = [];
     for (let i = 0; i < indicadores.length; i++) {
       objectsOfarray = indicadores[i];
       if (objectsOfarray.indicatorName == indicador) {
@@ -38,8 +43,18 @@ window.Funciones = {
     };
     return datos_2;
   },
-  paisSelected: () => {
-    const country = document.getElementsByName('pais.select');
+
+  ArrayOfYears: (indicatorSelected) => {
+    let showData = Funciones.arrayOfdata("PER", indicatorSelected);
+    let arrayData = Object.keys(showData)
+    let años = [];
+    for (let i = 0; i < arrayData.length; i++) {
+      años.push(arrayData[i]);
+    }
+    return años;
+  },
+
+  paisSelected: (country) => {
     let seleccion = "";
     for (let i = 0; i < country.length; i++) {
       if (country[i].checked == true) {
@@ -47,6 +62,13 @@ window.Funciones = {
         return seleccion;
       }
     }
+  },
+
+  CounterOfYears: () => {
+    let inputFrom2 = parseInt(document.getElementById("Age-1").value);
+    let inputTo2 = parseInt(document.getElementById("Age-2").value);
+    let totalYears = inputTo2 - inputFrom2;
+    return totalYears;
   },
 };
 /*const example = () => {
