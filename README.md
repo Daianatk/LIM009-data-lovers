@@ -104,7 +104,7 @@ Features/características extra sugeridas:
 
 ## Checklist
 
-* [ ] Usa VanillaJS.
+* [-] Usa VanillaJS.
 * [-] No hace uso de `this`.
 * [ ] Pasa linter (`npm run pretest`)
 * [ ] Pasa tests (`npm test`)
@@ -122,4 +122,4 @@ Features/características extra sugeridas:
 * [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
 * [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
+* [-] UI: Es _responsive_.
