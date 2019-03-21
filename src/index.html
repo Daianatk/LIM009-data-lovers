@@ -1,71 +1,86 @@
 <!DOCTYPE html>
-<html>
-
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Data WorldBank</title>
-  <link rel="stylesheet" href="style.css" />
+    <title>Data WorldBank</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
 </head>
 
 <body>
-  <div class="container">
-    <header class="titulo texto">Data WorldBank</header>
-    <nav class="box menu texto ">
-      <div>
-        <li class="item One "><a href="">Home</a></li>
-        <li class="item Two"><a href="">Datos</a></li>
-        <li class="item Three"><a href="">News</a></li>
-      </div>
-    </nav>
-    <aside class="box left texto">
-          <h2 >¿QUE INFORMACIÓN DESEA VER?</h2><hr>
-          <form class="form1">
-                <h3 class="label1 columAll">Indicadores:</h3>
-                <select id="lista" class="list_indicadores columAll"></select>
-            <div class="opciones cuadro columAll">
-                <h3 class="label2 columAll">Selecciona un Pais:</h3>
-                <input type="checkbox" name="pais.select" id="input_Per" value="0" class="pais "/>Perú
-                <input type="checkbox" name="pais.select" id="input_Mex" value="1" class="pais "/>México
-                <input type="checkbox" name="pais.select" id="input_Bra" value="2" class="pais "/>Brasil
-                <input type="checkbox" name="pais.select" id="input_Chl" value="3" class="pais "/>Chile
-            </div>
-            <button class="filtrar" id=filtrarX>Filtrar</button>
-            <button class="clear">Limpiar</button>
+    <header>
+        <div class="contenedor">
+            <img class="logo" src="img\titulo.jpg">
+            <input type="checkbox" id="menu-bar">
+            <label class="fontawesome-align-justify" for="menu-bar"></label>
+                    <nav class="menu">
+                        <a href="">Descargar XLS</a>
+                        <a href="">Estadistica</a>
+                        <a href="">Gràfico</a>
+                        <a href="">Datos</a>
+                    </nav>
+                </div>
+    </header>
+            
+            <main>
+                <section id="banner" class="contenedor">
+                    <img src="img\poblacion.jpg">
+                </section>
+                <section id="bienvenidos">
+                <h3>¿Seleccione los datos que desea revisar?</h3>
+                <div class="contenedor">
+                    <aside>
+                    <form class="form1">
+                        <h3 class="label1 columAll">Indicadores:</h3>
+                        <select id="List" class="list_indicadores columAll" onchange="filter()">
+                        <option value="" disabled selected>--Seleccione un Indicardor--</option>
+                        </select>
+                        <div class="opciones cuadro columAll">
+                            <h3 class="label2 columAll">Selecciona un Pais:</h3>
+                            <input type="checkbox" name="pais.select" id="input_Per" value="PER" class="pais"/>Perú
+                            <input type="checkbox" name="pais.select" id="input_Mex" value="MEX" class="pais"/>México
+                            <input type="checkbox" name="pais.select" id="input_Bra" value="BRA" class="pais"/>Brasil
+                            <input type="checkbox" name="pais.select" id="input_Chl" value="CHL" class="pais"/>Chile
+                        </div>
+                              <button type="button" class="filtrar" id="filtrarX" onclick="genera_tabla()">Filtrar</button>
+                              <button class="clear" id="borrar">Limpiar</button>
+                              <div class="date cuadro columAll">
+                                <h3 class="label3 columAll">Seleccione los años:</h3>
+                                <label class="from colum1">Desde:</label>
+                                <select id="Age-1" class="fromAges colum2"></select>
+                                <label class="to colum1">Hasta:</label>
+                                <select id="Age-2" class="toAges colum2"></select>
+                              </div>
+                        </div>
+                    </form>
+                </aside>
+                </section>
+            
+                <section id="sectionDta" class="contenedor">
+                    <h3>La data por Año seleccionada es:</h3>
+                    <div class="contenedor">
+                        <p id="demo"></p><br><hr><br>
+                        <table type="table" id="dta_ages" class="Tabla"></table>
+                    </div>
+                </section>
+            </main>
+            
+            <footer>
+                <div class="contenedor">
+                    <p class="copy">Copyright &copy; 2019 Todos los derechos reservados</p>
+                    <div class="sociales">
+                        <a class="fontawesome-facebook-sign" href="#"></a>
+                        <a class="fontawesome-twitter" href="#"></a>
+                        <a class="fontawesome-camera-retro" href="#"></a>
+                        <a class="fontawesome-google-plus-sign" href="#"></a>
+                    </div>
+                </div>
+            </footer>
 
-            <div class="date cuadro columAll"> 
-              <h3 class="label3 columAll">Seleccione los años:</h3>        
-              <label class="from colum1">Desde:</label>
-              <select id="Age-1" class="fromAges colum2"></select>
-              <label class="to colum1">Hasta:</label>
-              <select id="Age-2" class="toAges colum2"></select>
-            </div>
-          </form>
-    </aside>
-    <section class="data texto">
-      <span id="dta_ages"></span>
-    </section>
-    <aside class="box right texto">Right</aside>
-    <footer class="box pie texto">Pie de pagina</footer>
-  </div>
-  <script src="data/worldbank/worldbank.js"></script>
-  <script src="data.js"></script>
-  <script src="main.js"></script>
-
-</body>
-
-</html>
-
-  <head>
-    <meta charset="utf-8">
-    <title>World Bank</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="./data/worldbank/worldbank.js"></script>
+    <script src="data/worldbank/worldbank.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
-  </body>
+</body>
 </html>
-
