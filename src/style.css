@@ -1,212 +1,176 @@
-* {
-    margin: 0;
-    padding: 0;
+*{
+margin: 0;
+padding: 0;
 }
-
-body {
+body{
     font-family: sans-serif;
 }
-
-.container {
+.container{
     display: grid;
-    grid-template-rows: 43fr;
+    grid-template-rows: 43fr ;
     grid-template-columns: 4fr 8fr;
     height: 85vh;
     max-width: 80vw;
     margin: auto;
     color: white;
 }
-
-h1 {
+h1{
     color: black;
 }
-
-.texto {
+.texto{
     text-align: center;
 }
-
-.box {
+.box{
     display: grid;
 }
-
-.img {
-    background-size: auto;
+.img{
+    background-size:auto;
     width: 30px;
     height: 30px;
 }
-
-.menu {
+.menu{
     max-width: 80vw;
+    border: 2px solid skyblue;
     margin: auto;
 }
-
-ul {
+ul{
     padding: 0;
     list-style: none;
     background: #2e2e2a;
     line-height: 40px;
     overflow: auto;
 }
-
-li {
+li{
     width: 150px;
     float: right;
     text-align: center;
 }
-
-a {
+a{
     display: block;
     color: white;
     font-size: 15px;
 }
-
-a:hover {
+a:hover{
     background: skyblue;
-    color: #0009;
+    color: #0009;  
 }
-
-.left {
+.left{
     grid-column: 1/2;
-    background: #154B72;
+    background:#154B72;
     grid-template-rows: 1fr 5fr;
 }
-
-.left h2 {
+.left h2{
     grid-row: 1/2;
-    border: 1px solid white;
+    border:1px solid white;
     border-radius: 10px;
     width: 90%;
     margin: auto;
     height: 70%;
     padding-top: 4%;
 }
-
-.left form {
+.left form{
     grid-row: 2/3;
     width: 90%;
-    margin: auto;
-    display: grid;
+    margin: auto;  
+    display: grid;  
     height: 90%;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
     border-radius: 10px;
     border: 1px solid white;
 }
-
-select {
+select{
     height: 70%;
-    margin: 5%;
+    margin:5%;
 }
-
-button {
+button{
     border-radius: 10px;
     height: 80%;
-    width: 80%;
+    width:80%;
     margin: auto;
 }
-
-.left .form1 .label1 {
+.left .form1 .label1{
     grid-row: 1/2;
     margin: auto;
 }
-
-.left .form1 .opciones {
+.left .form1 .opciones{
     grid-row: 3/6;
-    grid-template-rows: repeat(3, 0.3333fr);
-    grid-template-columns: repeat(4, 0.25fr);
+    grid-template-rows:repeat(3,0.3333fr);
+    grid-template-columns: repeat(4,0.25fr);
 }
-
-.left .form1 .opciones .label2 {
+.left .form1 .opciones .label2{
     grid-row: 1/2;
     margin: auto;
     grid-column: 1/5;
 }
-
-.cuadro {
-    border: 1px solid white;
+.cuadro{
+    border:1px solid white; 
     margin: auto;
     width: 80%;
-    border-radius: 10px;
+    border-radius:10px; 
     height: 90%;
-    display: grid;
+    display:grid;
 }
-
-.pais {
+.pais{
     margin: auto;
     margin-top: 0;
     margin-right: 0;
 }
-
-.label3 {
+.label3{
     margin: auto;
 }
-
-.colum1 {
+.colum1{
     grid-column: 1/2;
 }
-
-.colum2 {
+.colum2{
     grid-column: 2/3;
 }
-
-.columAll {
+.columAll{
     grid-column: 1/3;
 }
-
-.row23 {
+.row23{
     grid-row: 2/3;
 }
-
-.row34 {
+.row34{
     grid-row: 3/4;
 }
-
-.left .form1 .date {
+.left .form1 .date{
     grid-row: 6/8;
-    grid-template-rows: repeat(3, fr);
+    grid-template-rows:repeat(3,fr);
     grid-template-columns: 0.5fr 0.5fr;
 }
-
-.left .form1 .filtrar {
+.left .form1 .filtrar{
     grid-row: 8/9;
 }
-
-.left .form1 .clear {
+.left .form1 .clear{
     grid-row: 8/9;
 }
-
-.data {
-    grid-column: 2/4;
-    grid-template-columns: repeat(1, 24fr);
+.data{
+    grid-column: 2/4; 
+    grid-template-columns: repeat(1,24fr); 
     background: #77878F;
 }
-
-.Tabla {
+.Tabla{
     margin: auto;
     background-color: white;
     color: black;
     font-family: arial;
     border-collapse: collapse;
 }
-
-th, td {
+th,td{
     padding: 0;
     margin: 0;
 }
-
-td {
+td{
     text-align: left;
 }
-
-tr:nth-child(even) {
+tr:nth-child(even){
     background-color: #ddd;
 }
-
-th {
+th{
     background: #48507a;
     padding: 5px;
     color: white;
 }
-
-tr:hover {
+tr:hover{
     background-color: #5b75aa;
 }

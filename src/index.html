@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
   <meta charset="utf-8">
   <title>Data Lovers</title>
@@ -26,15 +25,16 @@
       <hr>
       <form class="form1">
         <h3 class="label1 columAll">Indicadores:</h3>
-        <select id="List" class="list_indicadores columAll">
+        <select id="List" class="list_indicadores columAll" onchange="filterName(indicatorSelected)">
+          <option value="" disabled selected>--Seleccione un indicardor--</option>
         </select>
 
         <div class="opciones cuadro columAll">
           <h3 class="label2 columAll">Selecciona un Pais:</h3>
           <div id="paises"></div>
         </div>
-        <button type="button" class="filtrar" id="filtrarX" >FILTRAR</button>
-        <button class="clear" id="borrar">Limpiar</button>
+        <button type="button" class="filtrar" id="filter" >FILTRAR</button>
+        <button type="button" class="clear" id="borrar">Limpiar</button>
 
         <div class="date cuadro columAll">
           <h3 class="label3 columAll">Seleccione los años:</h3>
@@ -51,9 +51,17 @@
       <table type="table" id="dta_ages" class="Tabla"></table>
     </section>
   </div>
+  <footer class="box pie texto">Pie de pagina</footer>
+  <!--  <div id="root"></div>-->
+  <!-- <script src="./data/injuries/injuries.js"></script> -->
+  <!-- <script src="./data/pokemon/pokemon.js"></script> -->
+  <!-- <script src="./data/steam/steam.js"></script> -->
+  <!-- <script src="./data/worldbank/worldbank.js"></script> -->
+  <!-- <script src="./data/lol/lol.js"></script> -->
   <script src="data/worldbank/worldbank.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
+
 </body>
 
 </html>
