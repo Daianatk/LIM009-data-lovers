@@ -1,48 +1,57 @@
-selectIndicators = document.getElementById("List");
-let arreglo = Funciones.arrayOfIndicators("PER");
-for (let x = 0; x < arreglo.length; x++) {
-    option = document.createElement("option");
-    option.value = arreglo[x];
-    option.text = arreglo[x];
-    selectIndicators.appendChild(option);
+const List_indicators = document.getElementById("List");
+const generateList = (arreglo) => {
+    let string = `<option disabled selected>--Seleccione un indicador--</option>`;
+    for (let x = 0; x < arreglo.length; x++) {
+        string += `<option value="${arreglo[x]}">${arreglo[x]}</option>`
+    }
+    return string;
 };
+List_indicators.innerHTML = generateList(example.arrayOfIndicators("PER", WORLDBANK));
 
-select = document.getElementById("Age-1");
-for (let i = 1960; i <= 2016; i++) {
-    option = document.createElement("option");
-    option.value = i;
-    option.text = i;
-    select.appendChild(option);
+const listCountries = document.getElementById("paises");
+const printCountries = (countries) => {
+    let pais = '';
+    for (let i = 0; i < countries.length; i++) {
+        pais += `<input type="checkbox"  class="pais" name="countrySelect" value='${countries[i]}'/> ${countries[i]}`;
+    }
+    return pais;
+}
+listCountries.innerHTML = printCountries(example.getUniqueCountry(WORLDBANK));
+
+const generateYears = (obj) => {
+    let arrayYears = Object.keys(obj);
+    let optionYears = 0;
+    for (let i = arrayYears[0]; i <= arrayYears[arrayYears.length - 1]; i++) {
+        optionYears += `<option value='${i % 1960}'>${i}</option>`;
+    }
+    return optionYears;
 };
+const selectYearsFrom = document.getElementById("Age-1");
+selectYearsFrom.innerHTML = generateYears(example.objectOfdata("PER", "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)", WORLDBANK));
+const selectYearsTwo = document.getElementById("Age-2");
+selectYearsTwo.innerHTML = generateYears(example.objectOfdata("PER", "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)", WORLDBANK));
 
-selectTwo = document.getElementById("Age-2");
-for (let n = 1961; n <= 2017; n++) {
-    option = document.createElement("option");
-    option.value = n;
-    option.text = n;
-    selectTwo.appendChild(option);
-};
 
-function filter() {
+const filterName = () => {
     let indicatorSelected = document.getElementById('List').value;
     const writeTitle = document.getElementById("demo");
     writeTitle.innerHTML = '"' + indicatorSelected + '"';
 };
 
-function ArrayOfYears() {
-    let indicatorSelected = document.getElementById('List').value;
-    let showData = Funciones.arrayOfdata("PER", indicatorSelected);
-    let arrayData = Object.keys(showData);
-    let años = [];
-    for (let i = 0; i < arrayData.length; i++) {
-        años.push(arrayData[i]);
+const paisSelected = () => {
+    const country = document.getElementsByName('countrySelect');
+    let seleccion = "";
+    for (let i = 0; i < country.length; i++) {
+        if (country[i].checked == true) {
+            seleccion = country[i].value;
+            return seleccion;
+        }
     }
-    return años;
 };
 
-function ArrayOfYearsValue() {
+const ArrayOfYearsValue = () => {
     let indicatorSelected2 = document.getElementById('List').value;
-    let showData2 = Funciones.arrayOfdata(Funciones.paisSelected(), indicatorSelected2);
+    let showData2 = example.objectOfdata(paisSelected(), indicatorSelected2, WORLDBANK);
     let arrayData2 = Object.keys(showData2);
     let valores = [];
     for (let i = 0; i < arrayData2.length; i++) {
@@ -51,21 +60,14 @@ function ArrayOfYearsValue() {
     return valores;
 };
 
-const clearForm = document.getElementById('borrar');
-clearForm.addEventListener("click", limpiarFormulario);
-
-function limpiarFormulario() {
-    document.getElementById("form1").reset();
-};
-
-function genera_tabla() {
+const genera_tabla=()=> {
+    let indicatorSelected = document.getElementById('List').value;
     const body = document.getElementsByTagName("table")[0];
     const tabla = document.createElement("table");
-    const tblHeader = document.createElement("theader");
     const tblSection = document.createElement("tsection");
-    let getYears = ArrayOfYears();
+    let getYears = Object.keys(example.objectOfdata(paisSelected(), indicatorSelected, WORLDBANK));
     let getValue = ArrayOfYearsValue();
-    let getCountry = Funciones.paisSelected();
+    let getCountry = paisSelected();
 
     for (let j = 0; j < 1; j++) {
         let Trheaders = document.createElement("tr");
@@ -87,8 +89,17 @@ function genera_tabla() {
             }
             tblSection.appendChild(hilera);
         }
-    };
+    }
     tabla.appendChild(tblSection);
-    tabla.appendChild(tblHeader);
     body.appendChild(tabla);
 };
+
+document.getElementById("filter").addEventListener("click", genera_tabla);
+
+const limpiarFormulario=()=>{
+    document.getElementById("form1").reset();
+};
+
+const clearForm = document.getElementById("borrar");
+clearForm.addEventListener("click", limpiarFormulario);
+
