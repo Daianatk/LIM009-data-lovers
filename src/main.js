@@ -31,9 +31,8 @@ selectYearsFrom.innerHTML = generateYears(Funciones.objectOfdata("PER", "Empleo 
 const selectYearsTwo = document.getElementById("Age-2");
 selectYearsTwo.innerHTML = generateYears(Funciones.objectOfdata("PER", "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)", WORLDBANK));
 
-let indicatorSelected = document.getElementById('List').value;
-
-const filterName = (indicatorSelected) => {
+const filterName = () => {
+    let indicatorSelected = document.getElementById('List').value;
     const writeTitle = document.getElementById("demo");
     writeTitle.innerHTML = '"' + indicatorSelected + '"';
 };
@@ -62,9 +61,10 @@ const ArrayOfYearsValue = () => {
 };
 
 
-
 const genera_tabla=()=> {
     let indicatorSelected = document.getElementById('List').value;
+    let yearsFrom=document.getElementById("Age-1").value;
+    let yearsTo=document.getElementById("Age-2").value;
     const body = document.getElementsByTagName("table")[0];
     const tabla = document.createElement("table");
     const tblSection = document.createElement("tsection");
@@ -81,7 +81,7 @@ const genera_tabla=()=> {
         headersTable.appendChild(textHeader);
     }
 
-    for (let i = 0; i < 58; i++) {
+    for (let i = yearsFrom; i <= yearsTo; i++) {
         if (getValue[i] !== "") {
             let hilera = document.createElement("tr");
             for (let j = 0; j < 1; j++) {
