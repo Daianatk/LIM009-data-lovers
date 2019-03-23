@@ -12,7 +12,7 @@ const listCountries = document.getElementById("paises");
 const printCountries = (countries) => {
     let pais = '';
     for (let i = 0; i < countries.length; i++) {
-        pais += `<input type="checkbox"  class="pais" name="countrySelect" value='${countries[i]}'/> ${countries[i]}`;
+        pais += `<input type="checkbox"  class="pais ${countries[i]}" name="countrySelect" value='${countries[i]}'/> ${countries[i]}`;
     }
     return pais;
 };
@@ -48,10 +48,10 @@ const genera_tabla = (idIndicator, idFrom, idTo, idShow, idCountry, idTitle) => 
         valores.push(showData[arrayData[i]]);
     }
     let box = document.getElementById(idShow);
-    box.innerHTML = `<span class="titleTable"> ${nameCountry}</span>`;
-
+    
+    box.innerHTML = `<tr><th class="titleTable"> ${nameCountry}</th><th>Dato</th><tr>`;
     for (let i = yearsFrom; i <= yearsTo; i++) {
-        box.innerHTML += `<p> ${arrayData[i]}  :  ${valores[i]}</p>`;
+        box.innerHTML += `<tr><td> ${arrayData[i]}</td><td>${valores[i]}</td><tr>`;
     }
 };
 const generateTable = document.getElementById("filter");
