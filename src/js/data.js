@@ -1,4 +1,4 @@
-window.Funciones = {
+window.bank = {
   getUniqueCountry: (data) => {
     let arrUniqueCountry = [];
     arrUniqueCountry = Object.keys(data);
@@ -11,19 +11,19 @@ window.Funciones = {
       if (countries[j] == countryToexample) {
         datos = dta[countries[j]];
       }
-    };
+    }
     let arrayOfobject = Object.keys(datos);
-    let Indicators = datos[arrayOfobject[0]];
+    let indicatorsOfArray = datos[arrayOfobject[0]];
     let array = [];
-    for (let n = 0; n < Indicators.length; n++) {
-      let arrayIndicators = Indicators[n];
-      array.push(arrayIndicators['indicatorName']);
+    for (let n = 0; n < indicatorsOfArray.length; n++) {
+      let arrindicators = indicatorsOfArray[n];
+      array.push(arrindicators['indicatorName']);
     }
     return array;
   },
 
   objectOfdata: (country, indicador, dat) => {   //recibe como parametros un pais y un indicador, y retorna la data correspondiente 
-    let arrIndicator = Funciones.arrayOfIndicators(country, dat);
+    let arrIndicator = bank.arrayOfIndicators(country, dat);
     let arrResult = dat[country]["indicators"];
     let datThree = "";
     for (let i = 0; i < arrIndicator.length; i++) {
@@ -33,4 +33,14 @@ window.Funciones = {
     }
     return datThree;
   },
+  paisSelected : (names) => {
+    let arrPaises=document.getElementsByName(names);
+    let seleccion = "";
+    for (let i = 0; i < arrPaises.length; i++) {
+        if (arrPaises[i].checked == true) {
+            seleccion = arrPaises[i].value;
+            return seleccion;
+        }
+    }
+},
 };

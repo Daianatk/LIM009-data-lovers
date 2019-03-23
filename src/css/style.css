@@ -1,9 +1,24 @@
+@import url('http://weloveiconfonts.com/api/?family=fontawesome|typicons');
+[class*="fontawesome-"]:before {
+    font-family: 'Acme', sans-serif;
+    font-family: 'FontAwesome', sans-serif;
+}
 *{
 margin: 0;
 padding: 0;
+box-sizing: border-box;
 }
 body{
     font-family: sans-serif;
+}
+header{
+    margin-left: 0;
+}
+.logo {
+    width: 65%; 
+    height: 150px;
+    top: 0;
+    left: 0;;
 }
 .container{
     display: grid;
@@ -14,23 +29,14 @@ body{
     margin: auto;
     color: white;
 }
-h1{
-    color: black;
-}
 .texto{
     text-align: center;
 }
 .box{
     display: grid;
 }
-.img{
-    background-size:auto;
-    width: 30px;
-    height: 30px;
-}
 .menu{
     max-width: 80vw;
-    border: 2px solid skyblue;
     margin: auto;
 }
 ul{
@@ -45,7 +51,7 @@ li{
     float: right;
     text-align: center;
 }
-a{
+.aMenu{
     display: block;
     color: white;
     font-size: 15px;
@@ -154,23 +160,40 @@ button{
     background-color: white;
     color: black;
     font-family: arial;
-    border-collapse: collapse;
 }
-th,td{
-    padding: 0;
-    margin: 0;
-}
-td{
-    text-align: left;
-}
-tr:nth-child(even){
+p:nth-child(even){
     background-color: #ddd;
 }
-th{
+.Tabla p{
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.Tabla p:hover{
+    background-color: #8c9dbe;
+} 
+.Tabla span{
     background: #48507a;
-    padding: 5px;
+    color: white;
+    text-align: center;
+}
+
+footer .contenedorFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+    background-color:  rgba(16, 2, 77);
     color: white;
 }
-tr:hover{
-    background-color: #5b75aa;
+
+.sociales {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    background-color: rgba(16, 2, 77);
+}
+
+.sociales a{
+    text-decoration: none;
 }
