@@ -11,9 +11,11 @@
 <body>
   <header class="titulo texto">
     <img class="logo" src="img\titulo.jpg">
+    <section class="imgContener"> <img class="poblacion" src="img\poblacion.jpg"></section>
   </header>
   <nav class="box menu texto ">
     <ul class="contenido-lista">
+
       <li><a class="aMenu">Descargar en xls</a></li>
       <li><a class="aMenu">Ver estadísticos</a></li>
       <li><a class="aMenu">Ver gráfico</a></li>
@@ -21,28 +23,27 @@
     </ul>
   </nav>
   <div class="container">
-    <aside class="box left texto">
+    <aside class="box left texto colum1">
       <h2>¿QUE INFORMACIÓN DESEA VER?</h2>
-      <hr>
-      <form class="form1" id="form1">
+      <form class="form1 colum1" id="form1">
         <h3 class="label1 columAll">Indicadores:</h3>
         <select id="List" class="list_indicadores columAll">
           <option value="" disabled selected>--Seleccione un indicardor--</option>
         </select>
 
-        <div class="opciones cuadro columAll">
+        <div class="opciones cuadro colum1">
           <h3 class="label2 columAll">Selecciona un Pais:</h3>
           <div id="paises"></div>
         </div>
-        <button type="button" class="filtrar" id="filter" >FILTRAR</button>
+        <button type="button" class="filtrar" id="filter">FILTRAR</button>
         <button type="button" class="clear" id="borrar">Limpiar</button>
 
-        <div class="date cuadro columAll">
+        <div class="date cuadro colum2">
           <h3 class="label3 columAll">Seleccione los años:</h3>
-          <label class="from colum1">Desde:</label>
-          <select id="Age-1" class="fromAges colum2"></select>
-          <label class="to colum1">Hasta:</label>
-          <select id="Age-2" class="toAges colum2"></select>
+          <label class="from colum1 texto">Desde:</label>
+          <select id="Age-1" class="fromAges colum2 years"></select>
+          <label class="to colum1 texto">Hasta:</label>
+          <select id="Age-2" class="toAges colum2 years"></select>
         </div>
       </form>
     </aside>
@@ -54,15 +55,15 @@
   </div>
   <footer>
     <div class="contenedorFooter">
-        <p class="copy">Copyright &copy; 2019 Todos los derechos reservados</p>
-        <div class="sociales">
-            <a class="fontawesome-facebook-sign" href="#"></a>
-            <a class="fontawesome-twitter" href="#"></a>
-            <a class="fontawesome-camera-retro" href="#"></a>
-            <a class="fontawesome-google-plus-sign" href="#"></a>
-        </div>
+      <p class="copy">Copyright &copy; 2019 Todos los derechos reservados</p>
+      <div class="sociales">
+        <a class="fontawesome-facebook-sign" href="#"></a>
+        <a class="fontawesome-twitter" href="#"></a>
+        <a class="fontawesome-camera-retro" href="#"></a>
+        <a class="fontawesome-google-plus-sign" href="#"></a>
+      </div>
     </div>
-</footer>
+  </footer>
   <script src="data/worldbank/worldbank.js"></script>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
