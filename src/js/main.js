@@ -12,7 +12,7 @@ const listCountries = document.getElementById("paises");
 const printCountries = (countries) => {
     let pais = '';
     for (let i = 0; i < countries.length; i++) {
-        pais += `<input type="checkbox"  class="pais ${countries[i]}" name="countrySelect" value='${countries[i]}'/> ${countries[i]}`;
+        pais += `<input type="checkbox"  class="pais ${countries[i]} " name="countrySelect" value='${countries[i]}'/> ${countries[i]}`;
     }
     return pais;
 };
@@ -33,11 +33,8 @@ selectYearsFrom.innerHTML = generateYears(bank.objectOfdata("PER", "Empleo de ti
 const selectYearsTwo = document.getElementById("Age-2");
 selectYearsTwo.innerHTML = generateYears(bank.objectOfdata("PER", "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)", WORLDBANK));
 
-const genera_tabla = (idIndicator, idFrom, idTo, idShow, idCountry, idTitle) => {
+const genera_tabla = (idIndicator, idFrom, idTo, idShow, idCountry) => {
     let indicatorSelected = document.getElementById(idIndicator).value;
-    const writeTitle = document.getElementById(idTitle);
-    writeTitle.innerHTML = '"' + indicatorSelected + '"';
-
     let yearsFrom = document.getElementById(idFrom).value;
     let yearsTo = document.getElementById(idTo).value;
     let nameCountry = bank.paisSelected(idCountry);
@@ -49,14 +46,14 @@ const genera_tabla = (idIndicator, idFrom, idTo, idShow, idCountry, idTitle) => 
     }
     let box = document.getElementById(idShow);
     
-    box.innerHTML = `<tr><th class="titleTable"> ${nameCountry}</th><th>Dato</th><tr>`;
-    for (let i = yearsFrom; i <= yearsTo; i++) {
+    box.innerHTML = `<tr><caption>${nameCountry} : ${indicatorSelected}</caption></tr><tr><th>Año</th><th>Dato</th></tr>`;
+  for (let i = yearsFrom; i <= yearsTo; i++) {
         box.innerHTML += `<tr><td> ${arrayData[i]}</td><td>${valores[i]}</td><tr>`;
     }
 };
 const generateTable = document.getElementById("filter");
 generateTable.addEventListener("click", function () {
-    return genera_tabla("List", "Age-1", "Age-2", "dta_ages", "countrySelect", "demo");
+    return genera_tabla("List", "Age-1", "Age-2", "dta_ages", "countrySelect");
 });
 
 const limpiarFormulario = () => {

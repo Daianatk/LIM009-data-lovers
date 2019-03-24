@@ -10,46 +10,44 @@
 
 <body>
   <header class="titulo texto">
-    <img class="logo" src="img\titulo.jpg">
+    <img class="logo margen-auto" src="img\titulo.jpg">
     <section class="imgContener"> <img class="poblacion" src="img\poblacion.jpg"></section>
   </header>
   <nav class="box menu texto ">
     <ul class="contenido-lista">
-
       <li><a class="aMenu">Descargar en xls</a></li>
       <li><a class="aMenu">Ver estadísticos</a></li>
       <li><a class="aMenu">Ver gráfico</a></li>
       <li><a class="aMenu">Datos</a></li>
     </ul>
   </nav>
-  <div class="container">
+  <div class="container margen-auto">
     <aside class="box left texto colum1">
       <h2>¿QUE INFORMACIÓN DESEA VER?</h2>
-      <form class="form1 colum1" id="form1">
-        <h3 class="label1 columAll">Indicadores:</h3>
-        <select id="List" class="list_indicadores columAll">
+      <form class="form1 colum1 margen-auto" id="form1">
+        <h3 class="label1 columAll margen-auto">Indicadores:</h3>
+        <select id="List" class="list_indicadores columAll margen-auto">
           <option value="" disabled selected>--Seleccione un indicardor--</option>
         </select>
 
-        <div class="opciones cuadro colum1">
+        <div class="opciones cuadro colum1 margen-auto">
           <h3 class="label2 columAll">Selecciona un Pais:</h3>
-          <div id="paises"></div>
+          <div id="paises" class="paises margen-auto"></div>
         </div>
-        <button type="button" class="filtrar" id="filter">FILTRAR</button>
-        <button type="button" class="clear" id="borrar">LIMPIAR</button>
+        <button type="button" class="filtrar margen-auto" id="filter">FILTRAR</button>
+        <button type="button" class="clear  margen-auto" id="borrar">LIMPIAR</button>
 
-        <div class="date cuadro colum2">
+        <div class="date cuadro colum2 margen-auto">
           <h3 class="label3 columAll">Seleccione los años:</h3>
-          <label class="from colum1 texto">Desde:</label>
-          <select id="Age-1" class="fromAges colum2 years"></select>
-          <label class="to colum1 texto">Hasta:</label>
-          <select id="Age-2" class="toAges colum2 years"></select>
+          <label class="from colum1 texto margen-auto">Desde:</label>
+          <select id="Age-1" class="fromAges colum2 years margen-auto"></select>
+          <label class="to colum1 texto margen-auto">Hasta:</label>
+          <select id="Age-2" class="toAges colum2 years margen-auto"></select>
         </div>
       </form>
     </aside>
     <section class="data texto colum1" id="sectionDta">
-      <p id="demo"></p>
-      <table type="table" id="dta_ages" class="Tabla"></table>
+      <table type="table" id="dta_ages" class="Tabla margen-auto"></table>
     </section>
   </div>
   <footer>
