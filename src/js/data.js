@@ -33,14 +33,14 @@ window.bank = {
     }
     return datThree;
   },
-  paisSelected : (names) => {
-    let arrPaises=document.getElementsByName(names);
+  paisSelected: (names) => {
+    let arrPaises = document.getElementsByName(names);
     let seleccion = "";
     for (let i = 0; i < arrPaises.length; i++) {
-        if (arrPaises[i].checked == true) {
-            seleccion = arrPaises[i].value;
-            return seleccion;
-        }
+      if (arrPaises[i].checked == true) {
+        seleccion = arrPaises[i].value;
+        return seleccion;
+      }
     }
-},
+  },
 };

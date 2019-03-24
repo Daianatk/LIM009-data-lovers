@@ -26,7 +26,7 @@ ul{
     padding: 0;
     list-style: none;
     background: #2e2e2a;
-    line-height: 40px;
+    line-height: 50px;
     overflow: auto;
 }
 li{
@@ -51,12 +51,8 @@ a:hover{
     margin: 0 10% 0 10%;
 }
 .container{
-    display: grid;
-    grid-template-rows: 8fr 10fr ;
-    grid-template-columns: 12fr ;
     max-width: 60vw;
     background-color: #ecf0f1;
-
 }
 .box{
     display: grid;
@@ -148,15 +144,17 @@ button:hover{
 
 .left .form1 .opciones .label2{
     grid-row: 1/2;
+    margin-top:5%;
 }
 .label3{
     grid-row:1/2; 
+    margin-top:5%;
 }
 .left .form1 .date{
     grid-row:3/4;
     grid-template-rows:repeat(3,1fr);
     grid-template-columns:3fr 3fr;
-    margin-left: 1%;
+    margin-left: 3%;
 }
 .fromAges{
     grid-row:2/3;
@@ -178,7 +176,6 @@ button:hover{
     margin-left: 5%;
 }
  .data{
-    grid-row: 2/3;
     background: rgb(201, 205, 207);
     max-width: 80vw;
 } 

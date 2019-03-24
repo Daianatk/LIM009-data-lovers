@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="titulo texto">
+    <img class="logo " src="img\titulo.jpg">
+    <section class="imgContener"> <img class="poblacion" src="img\poblacion.jpg"></section>
+  </header>
+  <nav class="box menu texto ">
+    <ul class="contenido-lista">
+      <li><a class="aMenu">Descargar en xls</a></li>
+      <li><a class="aMenu">Ver estadísticos</a></li>
+      <li><a class="aMenu">Ver gráfico</a></li>
+      <li><a class="aMenu">Datos</a></li>
+    </ul>
+  </nav>
+  <div class="container margen-auto">
+    <aside class="box left texto colum1">
+      <h2>¿QUE INFORMACIÓN DESEA VER?</h2>
+      <form class="form1 colum1 margen-auto" id="form1">
+        <h3 class="label1 columAll margen-auto">Indicadores:</h3>
+        <select id="List" class="list_indicadores columAll margen-auto"></select>
+
+        <div class="opciones cuadro colum1 margen-auto">
+          <h3 class="label2 columAll margen-auto">Selecciona un Pais:</h3>
+          <div id="paises" class="paises margen-auto"></div>
+        </div>
+    
+        <div class="date cuadro colum2 margen-auto">
+          <h3 class="label3 columAll margen-auto">Seleccione los años:</h3>
+          <label class="from colum1 texto margen-auto">Desde:</label>
+          <select id="Age-1" class="fromAges colum2 years margen-auto"></select>
+          <label class="to colum1 texto margen-auto">Hasta:</label>
+          <select id="Age-2" class="toAges colum2 years margen-auto"></select>
+
+          <button type="button" class="filtrar margen-auto" id="filter">FILTRAR</button>
+          <button type="button" class="clear  margen-auto" id="borrar">LIMPIAR</button>
+        </div>
+      </form>
+    </aside>
+    <section class="data texto colum1" id="sectionDta">
+      <table type="table" id="dta_ages" class="Tabla margen-auto"></table>
+    </section>
+  </div>
+  <footer>
+    <div class="contenedorFooter">
+      <p class="copy">Copyright &copy; 2019 Todos los derechos reservados</p>
+      <div class="sociales">
+        <a class="fontawesome-facebook-sign" href="#"></a>
+        <a class="fontawesome-twitter" href="#"></a>
+        <a class="fontawesome-camera-retro" href="#"></a>
+        <a class="fontawesome-google-plus-sign" href="#"></a>
+      </div>
+    </div>
+  </footer>
+  <script src="data/worldbank/worldbank.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

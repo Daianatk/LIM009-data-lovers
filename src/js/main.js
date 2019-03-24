@@ -1,6 +1,6 @@
 const List_indicators = document.getElementById("List");
 const generateList = (arreglo) => {
-    let string = `<option disabled selected>--Seleccione un indicador--</option>`;
+    let string = `<option disabled selected>----Seleccione un indicador----</option>`;
     for (let x = 0; x < arreglo.length; x++) {
         string += `<option value="${arreglo[x]}">${arreglo[x]}</option>`
     }
@@ -45,9 +45,8 @@ const genera_tabla = (idIndicator, idFrom, idTo, idShow, idCountry) => {
         valores.push(showData[arrayData[i]]);
     }
     let box = document.getElementById(idShow);
-    
     box.innerHTML = `<tr><caption>${nameCountry} : ${indicatorSelected}</caption></tr><tr><th>Año</th><th>Dato</th></tr>`;
-  for (let i = yearsFrom; i <= yearsTo; i++) {
+    for (let i = yearsFrom; i <= yearsTo; i++) {
         box.innerHTML += `<tr><td> ${arrayData[i]}</td><td>${valores[i]}</td><tr>`;
     }
 };
