@@ -6,7 +6,11 @@ const generateList = (arreglo) => {
     }
     return string;
 };
+<<<<<<< HEAD
 List_indicators.innerHTML = generateList(Funciones.arrayOfIndicators("PER", WORLDBANK));
+=======
+List_indicators.innerHTML = generateList(example.arrayOfIndicators("PER", WORLDBANK));
+>>>>>>> a642074e0a8c205083ffb4a183359f9ad1b2cbf3
 
 const listCountries = document.getElementById("paises");
 const printCountries = (countries) => {
@@ -16,7 +20,11 @@ const printCountries = (countries) => {
     }
     return pais;
 }
+<<<<<<< HEAD
 listCountries.innerHTML = printCountries(Funciones.getUniqueCountry(WORLDBANK));
+=======
+listCountries.innerHTML = printCountries(example.getUniqueCountry(WORLDBANK));
+>>>>>>> a642074e0a8c205083ffb4a183359f9ad1b2cbf3
 
 const generateYears = (obj) => {
     let arrayYears = Object.keys(obj);
@@ -27,9 +35,16 @@ const generateYears = (obj) => {
     return optionYears;
 };
 const selectYearsFrom = document.getElementById("Age-1");
+<<<<<<< HEAD
 selectYearsFrom.innerHTML = generateYears(Funciones.objectOfdata("PER", "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)", WORLDBANK));
 const selectYearsTwo = document.getElementById("Age-2");
 selectYearsTwo.innerHTML = generateYears(Funciones.objectOfdata("PER", "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)", WORLDBANK));
+=======
+selectYearsFrom.innerHTML = generateYears(example.objectOfdata("PER", "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)", WORLDBANK));
+const selectYearsTwo = document.getElementById("Age-2");
+selectYearsTwo.innerHTML = generateYears(example.objectOfdata("PER", "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)", WORLDBANK));
+
+>>>>>>> a642074e0a8c205083ffb4a183359f9ad1b2cbf3
 
 const filterName = () => {
     let indicatorSelected = document.getElementById('List').value;
@@ -48,10 +63,16 @@ const paisSelected = () => {
     }
 };
 
+<<<<<<< HEAD
 
 const ArrayOfYearsValue = () => {
     let indicatorSelected2 = document.getElementById('List').value;
     let showData2 = Funciones.objectOfdata(paisSelected(), indicatorSelected2, WORLDBANK);
+=======
+const ArrayOfYearsValue = () => {
+    let indicatorSelected2 = document.getElementById('List').value;
+    let showData2 = example.objectOfdata(paisSelected(), indicatorSelected2, WORLDBANK);
+>>>>>>> a642074e0a8c205083ffb4a183359f9ad1b2cbf3
     let arrayData2 = Object.keys(showData2);
     let valores = [];
     for (let i = 0; i < arrayData2.length; i++) {
@@ -60,6 +81,7 @@ const ArrayOfYearsValue = () => {
     return valores;
 };
 
+<<<<<<< HEAD
 
 const genera_tabla=()=> {
     let indicatorSelected = document.getElementById('List').value;
@@ -72,6 +94,17 @@ const genera_tabla=()=> {
     let getYears = Object.keys(Funciones.objectOfdata(paisSelected(), indicatorSelected, WORLDBANK));
     let getValue = ArrayOfYearsValue();
  
+=======
+const genera_tabla=()=> {
+    let indicatorSelected = document.getElementById('List').value;
+    const body = document.getElementsByTagName("table")[0];
+    const tabla = document.createElement("table");
+    const tblSection = document.createElement("tsection");
+    let getYears = Object.keys(example.objectOfdata(paisSelected(), indicatorSelected, WORLDBANK));
+    let getValue = ArrayOfYearsValue();
+    let getCountry = paisSelected();
+
+>>>>>>> a642074e0a8c205083ffb4a183359f9ad1b2cbf3
     for (let j = 0; j < 1; j++) {
         let Trheaders = document.createElement("tr");
         let headersTable = document.createElement("th");
@@ -96,12 +129,23 @@ const genera_tabla=()=> {
     tabla.appendChild(tblSection);
     body.appendChild(tabla);
 };
+<<<<<<< HEAD
 const generateTable=document.getElementById("filter");
 generateTable.addEventListener("click", genera_tabla);
+=======
+
+document.getElementById("filter").addEventListener("click", genera_tabla);
+>>>>>>> a642074e0a8c205083ffb4a183359f9ad1b2cbf3
 
 const limpiarFormulario=()=>{
     document.getElementById("form1").reset();
 };
 
+<<<<<<< HEAD
 const clearForm = document.getElementById('borrar');
 clearForm.addEventListener("click", limpiarFormulario);
+=======
+const clearForm = document.getElementById("borrar");
+clearForm.addEventListener("click", limpiarFormulario);
+
+>>>>>>> a642074e0a8c205083ffb4a183359f9ad1b2cbf3
