@@ -7,6 +7,10 @@
   },
   "extends": "eslint:recommended",
   "globals": {
-    "example": false
+    "example": false,
+    "WORLDBANK" : false,
+    "bank" : false,
+    "chartGraph":false,
+    "Chart":false
   }
 }
