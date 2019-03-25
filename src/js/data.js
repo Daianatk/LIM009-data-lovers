@@ -43,4 +43,34 @@ window.bank = {
       }
     }
   },
+  intervalYears: (idFrom, idTo) => {
+    let From = parseInt(document.getElementById(idFrom).value);
+    let To = parseInt(document.getElementById(idTo).value);
+    let arrYears = [];
+    for (let i = From + 1960; i <= To + 1960; i++) {
+      arrYears.push(i);
+    }
+    return arrYears;
+  },
+  arrValuesSelect: (arrSelect,idpais,idindicador) => {
+    let countrySelect = bank.paisSelected(idpais);
+    let indicatorSelect = document.getElementById(idindicador).value;
+    let objData = bank.objectOfdata(countrySelect, indicatorSelect, WORLDBANK);
+    let arrvalues = [];
+    for (let i = 0; i <= arrSelect.length; i++) {
+      arrvalues.push(objData[arrSelect[i]]);
+    }
+    return arrvalues;
+  },
+  arrValues: (idpais, idindicador) => {
+    let countrySelect = bank.paisSelected(idpais);
+    let indicatorSelect = document.getElementById(idindicador).value;
+    let objDtaAll = bank.objectOfdata(countrySelect, indicatorSelect, WORLDBANK);
+    let arrData = Object.keys(objDtaAll);
+    let valores = [];
+    for (let i = 0; i < arrData.length; i++) {
+      valores.push(objDtaAll[arrData[i]]);
+    }
+    return valores;
+  },
 };

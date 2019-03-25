@@ -35,15 +35,12 @@ selectYearsTwo.innerHTML = generateYears(bank.objectOfdata("PER", "Empleo de tie
 
 const genera_tabla = (idIndicator, idFrom, idTo, idShow, idCountry) => {
     let indicatorSelected = document.getElementById(idIndicator).value;
-    let yearsFrom = document.getElementById(idFrom).value;
-    let yearsTo = document.getElementById(idTo).value;
+   let yearsFrom = document.getElementById(idFrom).value;
+    let yearsTo = document.getElementById(idTo).value; 
     let nameCountry = bank.paisSelected(idCountry);
     let showData = bank.objectOfdata(nameCountry, indicatorSelected, WORLDBANK);
     let arrayData = Object.keys(showData);
-    let valores = [];
-    for (let i = 0; i < arrayData.length; i++) {
-        valores.push(showData[arrayData[i]]);
-    }
+    let valores = bank.arrValues(idCountry,idIndicator)
     let box = document.getElementById(idShow);
     box.innerHTML = `<tr><caption>${nameCountry} : ${indicatorSelected}</caption></tr><tr><th>Año</th><th>Dato</th></tr>`;
     for (let i = yearsFrom; i <= yearsTo; i++) {

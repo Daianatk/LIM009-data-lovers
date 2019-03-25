@@ -33,6 +33,7 @@ li{
     width: 150px;
     float: right;
     text-align: center;
+    cursor:pointer;
 }
 .aMenu{
     display: block;
@@ -68,7 +69,6 @@ a:hover{
 .left h2{
     grid-row: 1/2;
     width: 90%;
-    margin: auto;
     height: 70%;
     padding-top: 4%;
 }
@@ -186,7 +186,6 @@ button:hover{
     font-family: arial;
     outline: 1px solid black;
     width:35%;
-    margin: auto;
 }
 th, td{
     text-align: center;
@@ -196,9 +195,6 @@ th, td{
     color: white;
     text-align: center;
 }
-.country-class{
-    text-align: right;
-}
 .contenedorFooter {
     display: flex;
     flex-wrap: wrap;
@@ -206,6 +202,7 @@ th, td{
     padding-bottom: 25px;
     background-color:  rgba(16, 2, 77);
     color: white;
+    margin-top:2%
 }
 
 .sociales {

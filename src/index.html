@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>Data Lovers</title>
-  <link rel="stylesheet" href="css/fontello.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,13 +16,13 @@
     <ul class="contenido-lista">
       <li><a class="aMenu">Descargar en xls</a></li>
       <li><a class="aMenu">Ver estadísticos</a></li>
-      <li><a class="aMenu">Ver gráfico</a></li>
-      <li><a class="aMenu">Datos</a></li>
+      <li><a class="aMenu" id="SeeGraphic">Ver gráfico</a></li>
+      <li><a class="aMenu"> Ver Datos</a></li>
     </ul>
   </nav>
   <div class="container margen-auto">
     <aside class="box left texto colum1">
-      <h2>¿QUE INFORMACIÓN DESEA VER?</h2>
+      <h2 class="margen-auto">¿QUE INFORMACIÓN DESEA VER?</h2>
       <form class="form1 colum1 margen-auto" id="form1">
         <h3 class="label1 columAll margen-auto">Indicadores:</h3>
         <select id="List" class="list_indicadores columAll margen-auto">
@@ -49,6 +48,9 @@
     <section class="data texto colum1" id="sectionDta">
       <table type="table" id="dta_ages" class="Tabla margen-auto"></table>
     </section>
+    <section class="graphic">
+      <canvas id="line-chart"></canvas>
+    </section>
   </div>
   <footer>
     <div class="contenedorFooter">
@@ -64,7 +66,8 @@
   <script src="data/worldbank/worldbank.js"></script>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+<script src="js/graphic.js"></script>
 </body>
 
 </html>
