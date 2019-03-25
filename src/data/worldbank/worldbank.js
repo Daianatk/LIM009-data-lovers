@@ -328,7 +328,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Tasa de participación en la fuerza laboral, total (% de la población total mayor de 15 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, total (% de la población total mayor de 15 años) (estimación nacional)",
         "indicatorCode": "SL.TLF.CACT.NE.ZS"
       },
       {
@@ -394,7 +394,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Tasa de participación en la fuerza laboral, varones (% de la población masculina mayor de 15 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, varones (% de la población masculina mayor de 15 años) (estimación nacional)",
         "indicatorCode": "SL.TLF.CACT.MA.NE.ZS"
       },
       {
@@ -460,7 +460,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Proporciòn de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
+        "indicatorName": "Proporcin de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.CACT.FM.ZS"
       },
       {
@@ -658,7 +658,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina mayor de 15 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina mayor de 15 años) (estimación nacional)",
         "indicatorCode": "SL.TLF.CACT.FE.NE.ZS"
       },
       {
@@ -1120,7 +1120,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Tasa de participación en la fuerza laboral, total (% del total de la población entre 15-64 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, total (% del total de la población entre 15-64 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.ZS"
       },
       {
@@ -1186,7 +1186,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-64 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-64 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.MA.ZS"
       },
       {
@@ -1252,7 +1252,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-64 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-64 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.FE.ZS"
       },
       {
@@ -1318,7 +1318,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Tasa de participación en la fuerza laboral de personas entre 15 y 24 años; total (%)",
+        "indicatorName": "Tasa de participación en la fuerza laboral de personas entre 15 y 24 años; total (%) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.1524.ZS"
       },
       {
@@ -1450,7 +1450,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-24 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-24 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.1524.MA.ZS"
       },
       {
@@ -1582,7 +1582,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-24 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-24 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.1524.FE.ZS"
       },
       {
@@ -1846,7 +1846,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Incidencia de los beneficios de los programas de trabajo y protección social para el quintil más pobre (% total)",
+        "indicatorName": "Incidencia de los beneficios de los programas de trabajo y protección social (SPL) para el quintil más pobre (% del total de beneficios de los SPL)",
         "indicatorCode": "per_allsp.ben_q1_tot"
       },
       {
@@ -8116,7 +8116,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Incidencia de los beneficios de los programas activos del mercado laboral y los beneficios por desempleo para el quintil más pobre (% total)",
+        "indicatorName": "Incidencia de los beneficios de los programas activos del mercado laboral (ALMP) y los beneficios por desempleo para el quintil más pobre (% del total de beneficios de los ALMP/D)",
         "indicatorCode": "per_lm_alllm.ben_q1_tot"
       },
       {
@@ -15316,7 +15316,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Incidencia de los beneficios de los programas activos del mercado laboral y los beneficios por desempleo para el quintil más pobre (% total)",
+        "indicatorName": "Incidencia de los beneficios de los programas activos del mercado laboral (ALMP) y los beneficios por desempleo para el quintil más pobre (% del total de beneficios de los ALMP/D)",
         "indicatorCode": "per_lm_alllm.ben_q1_tot"
       },
       {
@@ -16042,7 +16042,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Tasa de participación en la fuerza laboral, total (% de la población total mayor de 15 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, total (% de la población total mayor de 15 años) (estimación nacional)",
         "indicatorCode": "SL.TLF.CACT.NE.ZS"
       },
       {
@@ -16108,7 +16108,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Tasa de participación en la fuerza laboral, varones (% de la población masculina mayor de 15 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, varones (% de la población masculina mayor de 15 años) (estimación nacional)",
         "indicatorCode": "SL.TLF.CACT.MA.NE.ZS"
       },
       {
@@ -16174,7 +16174,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Proporciòn de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
+        "indicatorName": "Proporcin de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.CACT.FM.ZS"
       },
       {
@@ -16372,7 +16372,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina mayor de 15 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina mayor de 15 años) (estimación nacional)",
         "indicatorCode": "SL.TLF.CACT.FE.NE.ZS"
       },
       {
@@ -16834,7 +16834,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Tasa de participación en la fuerza laboral, total (% del total de la población entre 15-64 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, total (% del total de la población entre 15-64 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.ZS"
       },
       {
@@ -16900,7 +16900,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-64 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-64 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.MA.ZS"
       },
       {
@@ -16966,7 +16966,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-64 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-64 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.FE.ZS"
       },
       {
@@ -17032,7 +17032,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Tasa de participación en la fuerza laboral de personas entre 15 y 24 años; total (%)",
+        "indicatorName": "Tasa de participación en la fuerza laboral de personas entre 15 y 24 años; total (%) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.1524.ZS"
       },
       {
@@ -17164,7 +17164,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-24 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-24 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.1524.MA.ZS"
       },
       {
@@ -17296,7 +17296,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-24 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-24 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.1524.FE.ZS"
       },
       {
@@ -17560,7 +17560,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Incidencia de los beneficios de los programas de trabajo y protección social para el quintil más pobre (% del total)",
+        "indicatorName": "Incidencia de los beneficios de los programas de trabajo y protección social (SPL) para el quintil más pobre (% del total de beneficios de los SPL)",
         "indicatorCode": "per_allsp.ben_q1_tot"
       },
       {
@@ -24496,7 +24496,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Incidencia de los beneficios de los programas activos del mercado laboral y los beneficios por desempleo para el quintil más pobre (% total)",
+        "indicatorName": "Incidencia de los beneficios de los programas activos del mercado laboral (ALMP) y los beneficios por desempleo para el quintil más pobre (% del total de beneficios de los ALMP/D)",
         "indicatorCode": "per_lm_alllm.ben_q1_tot"
       },
       {
@@ -25222,7 +25222,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Tasa de participación en la fuerza laboral, total (% de la población total mayor de 15 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, total (% de la población total mayor de 15 años) (estimación nacional)",
         "indicatorCode": "SL.TLF.CACT.NE.ZS"
       },
       {
@@ -25288,7 +25288,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Tasa de participación en la fuerza laboral, varones (% de la población masculina mayor de 15 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, varones (% de la población masculina mayor de 15 años) (estimación nacional)",
         "indicatorCode": "SL.TLF.CACT.MA.NE.ZS"
       },
       {
@@ -25354,7 +25354,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Proporciòn de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
+        "indicatorName": "Proporcin de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.CACT.FM.ZS"
       },
       {
@@ -25552,7 +25552,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina mayor de 15 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina mayor de 15 años) (estimación nacional)",
         "indicatorCode": "SL.TLF.CACT.FE.NE.ZS"
       },
       {
@@ -26014,7 +26014,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Tasa de participación en la fuerza laboral, total (% del total de la población entre 15-64 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, total (% del total de la población entre 15-64 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.ZS"
       },
       {
@@ -26080,7 +26080,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-64 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-64 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.MA.ZS"
       },
       {
@@ -26146,7 +26146,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-64 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-64 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.FE.ZS"
       },
       {
@@ -26212,7 +26212,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Tasa de participación en la fuerza laboral de personas entre 15 y 24 años; total (%)",
+        "indicatorName": "Tasa de participación en la fuerza laboral de personas entre 15 y 24 años; total (%) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.1524.ZS"
       },
       {
@@ -26344,7 +26344,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-24 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-24 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.1524.MA.ZS"
       },
       {
@@ -26476,7 +26476,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-24 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-24 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.1524.FE.ZS"
       },
       {
@@ -26740,7 +26740,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Incidencia de los beneficios de los programas de trabajo y protección social para el quintil más pobre (% del total)",
+        "indicatorName": "Incidencia de los beneficios de los programas de trabajo y protección social (SPL) para el quintil más pobre (% del total de beneficios de los SPL)",
         "indicatorCode": "per_allsp.ben_q1_tot"
       },
       {
@@ -27868,7 +27868,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Tasa de participación en la fuerza laboral, total (% de la población total mayor de 15 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, total (% de la población total mayor de 15 años) (estimación nacional)",
         "indicatorCode": "SL.TLF.CACT.NE.ZS"
       },
       {
@@ -27934,7 +27934,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Tasa de participación en la fuerza laboral, varones (% de la población masculina mayor de 15 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, varones (% de la población masculina mayor de 15 años) (estimación nacional)",
         "indicatorCode": "SL.TLF.CACT.MA.NE.ZS"
       },
       {
@@ -28000,7 +28000,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Proporciòn de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
+        "indicatorName": "Proporcin de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.CACT.FM.ZS"
       },
       {
@@ -28198,7 +28198,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina mayor de 15 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina mayor de 15 años) (estimación nacional)",
         "indicatorCode": "SL.TLF.CACT.FE.NE.ZS"
       },
       {
@@ -28660,7 +28660,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Tasa de participación en la fuerza laboral, total (% del total de la población entre 15-64 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, total (% del total de la población entre 15-64 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.ZS"
       },
       {
@@ -28726,7 +28726,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-64 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-64 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.MA.ZS"
       },
       {
@@ -28792,7 +28792,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-64 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-64 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.FE.ZS"
       },
       {
@@ -28858,7 +28858,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Tasa de participación en la fuerza laboral de personas entre 15 y 24 años; total (%)",
+        "indicatorName": "Tasa de participación en la fuerza laboral de personas entre 15 y 24 años; total (%) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.1524.ZS"
       },
       {
@@ -28990,7 +28990,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-24 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-24 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.1524.MA.ZS"
       },
       {
@@ -29122,7 +29122,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-24 años)",
+        "indicatorName": "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-24 años) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.ACTI.1524.FE.ZS"
       },
       {
@@ -29386,7 +29386,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Incidencia de los beneficios de los programas de trabajo y protección social para el quintil más pobre (% del total)",
+        "indicatorName": "Incidencia de los beneficios de los programas de trabajo y protección social (SPL) para el quintil más pobre (% del total de beneficios de los SPL)",
         "indicatorCode": "per_allsp.ben_q1_tot"
       },
       {
@@ -35656,7 +35656,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Incidencia de los beneficios de los programas activos del mercado laboral y los beneficios por desempleo para el quintil más pobre (% total)",
+        "indicatorName": "Incidencia de los beneficios de los programas activos del mercado laboral (ALMP) y los beneficios por desempleo para el quintil más pobre (% del total de beneficios de los ALMP/D)",
         "indicatorCode": "per_lm_alllm.ben_q1_tot"
       },
       {

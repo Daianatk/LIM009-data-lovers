@@ -1,57 +1,36 @@
 window.Funciones = {
-    arrayOfIndicators: (filtro) => {       //retorna un array que contiene todos los indicadores por pais.
-      let pais = Object.keys(WORLDBANK);
-      let datos = "";
-      for (let j = 0; j < pais.length; j++) {
-        if (pais[j] == filtro) {
-          datos = WORLDBANK[pais[j]];
-        }
-      };
-      let arrayOfobject = Object.keys(datos);
-      let Indicators = datos[arrayOfobject[0]];
-      let array = [];
-      for (let n = 0; n < Indicators.length; n++) {
-        let arrayIndicators = Indicators[n];
-        let nameIndicators = arrayIndicators.indicatorName;
-        array[n] = nameIndicators;
+  getUniqueCountry: (data) => {
+    let arrUniqueCountry = [];
+    arrUniqueCountry = Object.keys(data);
+    return arrUniqueCountry;
+  },
+  arrayOfIndicators: (countryToexample, dta) => {       //retorna un array que contiene todos los indicadores por pais.
+    let countries = Object.keys(dta);
+    let datos = "";
+    for (let j = 0; j < countries.length; j++) {
+      if (countries[j] == countryToexample) {
+        datos = dta[countries[j]];
       }
-      return array;
-    },
-  
-    arrayOfdata: (country, indicador) => { //retorna un array que contiene los paises.
-      let contries = Object.keys(WORLDBANK);
-      let datos2 = "";
-      for (let m = 0; m < contries.length; m++) {
-        if (contries[m] == country) {
-          datos2 = WORLDBANK[contries[m]];
-        }
-      };
-      let indicadores = datos2.indicators;
-      let objectsOfarray = "";
-      let datos_2 = "";
-      let arrayFinal = [];
-      for (let i = 0; i < indicadores.length; i++) {
-        objectsOfarray = indicadores[i];
-        if (objectsOfarray.indicatorName == indicador) {
-          datos_2 = objectsOfarray.data;
-        }
-      };
-      return datos_2;
-    },
-    paisSelected: () => {
-      const country = document.getElementsByName('pais.select');
-      let seleccion = "";
-      for (let i = 0; i < country.length; i++) {
-        if (country[i].checked == true) {
-          seleccion = country[i].value;
-          return seleccion;
-        }
+    };
+    let arrayOfobject = Object.keys(datos);
+    let Indicators = datos[arrayOfobject[0]];
+    let array = [];
+    for (let n = 0; n < Indicators.length; n++) {
+      let arrayIndicators = Indicators[n];
+      array.push(arrayIndicators['indicatorName']);
+    }
+    return array;
+  },
+
+  objectOfdata: (country, indicador, dat) => {   //recibe como parametros un pais y un indicador, y retorna la data correspondiente 
+    let arrIndicator = Funciones.arrayOfIndicators(country, dat);
+    let arrResult = dat[country]["indicators"];
+    let datThree = "";
+    for (let i = 0; i < arrIndicator.length; i++) {
+      if (arrIndicator[i] == indicador) {
+        datThree = arrResult[i]["data"];
       }
-    },
-  };
-  /*const example = () => {
-    return 'example';
-  };
-  
-  window.example = example;
-  */
+    }
+    return datThree;
+  },
+};
