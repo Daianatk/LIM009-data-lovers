@@ -1,77 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('http://weloveiconfonts.com/api/?family=fontawesome|typicons');
+
 [class*="fontawesome-"]:before {
     font-family: 'Acme', sans-serif;
     font-family: 'FontAwesome', sans-serif;
 }
+
 *{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
+
 body{
     font-family: sans-serif;
 }
+
 .logo {
-    width: 65%; 
-<<<<<<< HEAD
-    height: 150px;
-    margin-top: 3%;
-=======
-    height: 100px;
-    top: 0;
-    left: 0;;
->>>>>>> a642074e0a8c205083ffb4a183359f9ad1b2cbf3
+    width: 55%; 
+    height: auto;
+    margin-top: 5%;
 }
+
 .menu{
     position: fixed;
     top:0;
     width: 80vw;
     margin: 0 10% 0 10%;
 }
-<<<<<<< HEAD
+
 ul{
     padding: 0;
     list-style: none;
-    background: #2e2e2a;
+    background: #2c1e1e;
     line-height: 50px;
     overflow: auto;
+    position: center;
 }
+
 li{
     width: 150px;
     float: right;
     text-align: center;
     cursor:pointer;
-=======
-
-.contenedor {
-    width: 98%;
-    margin: auto;
-    align-content: center;
->>>>>>> a642074e0a8c205083ffb4a183359f9ad1b2cbf3
 }
+
 .aMenu{
     display: block;
     color: white;
-    font-size: 15px;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 a:hover{
     background: skyblue;
-    color: #0009;  
+    color: rgba(48, 47, 47, 0.6);  
 }
+
 .poblacion{
     width: 80vw;
-    height: 70vh;
-} 
-.imgContener{
+    height: 60%;
+    position: center;
     margin: 0 10% 0 10%;
-}
+} 
+
 .container{
     max-width: 60vw;
     background-color: #ecf0f1;
 }
+
 .box{
     display: grid;
 }
+
 .left{
     grid-template-rows: 1fr 8fr; 
     grid-template-columns: 12fr;
@@ -80,12 +82,14 @@ a:hover{
 .texto{
     text-align: center;
 }
+
 .left h2{
     grid-row: 1/2;
     width: 90%;
     height: 70%;
     padding-top: 4%;
 }
+
 .left form{
     grid-row: 2/3;
     width: 80%;
@@ -96,27 +100,34 @@ a:hover{
     border-radius: 10px;
     border: 1px solid black;
 }
+
 .cuadro{
-    border:1px solid black; 
+    border:1px solid rgb(22, 22, 22); 
     width: 80%;
     border-radius:10px; 
     height: 90%;
     display:grid;
+    position: relative;
 }
+
 .columAll{
     grid-column: 1/3;
 }
+
 .colum1{
     grid-column: 1/2;
 }
+
 .colum2{
     grid-column: 2/3;
 }
+
 .list_indicadores{
     height: 70%;
     grid-row:2/3;
     width: 70%;
 }
+
 select{
     background: transparent;
     border: 1px solid skyblue;
@@ -132,23 +143,29 @@ button{
     font-size: 16px;
     color: #0099CC;
     cursor: pointer;
+    position: center;
 }
+
 button:hover{
     background-color: #008CBA;
     color: white;
 }
+
 .left .form1 .label1{
     grid-row: 1/2;
 }
+
 .left .form1 .opciones{
     grid-row:3/4;
     grid-template-rows:repeat(3,1fr);
     grid-template-columns: repeat(2,3fr);
     margin-right:2%; 
 }
+
  .pais{
     margin: 5%;
 } 
+
 .paises{
     grid-row: 2/4;
     grid-column: 1/3;
@@ -160,55 +177,71 @@ button:hover{
     grid-row: 1/2;
     margin-top:5%;
 }
+
 .label3{
     grid-row:1/2; 
     margin-top:5%;
 }
+
 .left .form1 .date{
     grid-row:3/4;
     grid-template-rows:repeat(3,1fr);
     grid-template-columns:3fr 3fr;
     margin-left: 3%;
 }
+
 .fromAges{
     grid-row:2/3;
 }
+
 .toAges{
     grid-row:3/4;
 }
+
 .years{
     width: 70%;
     height: 80%;
 }
+
 .left .form1 button{
     grid-row: 4/5;
 }
+
 .filtrar{
     margin-right: 5%;
 }
+
 .clear{
     margin-left: 5%;
 }
+
  .data{
     background: rgb(201, 205, 207);
     max-width: 80vw;
 } 
+
 .margen-auto{
     margin: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
 }
+
 .Tabla{
-    font-family: arial;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     outline: 1px solid black;
     width:35%;
 }
+
 th, td{
     text-align: center;
 }
+
 .Tabla caption{
     background: #48507a;
     color: white;
     text-align: center;
 }
+
 .contenedorFooter {
     display: flex;
     flex-wrap: wrap;
@@ -228,54 +261,84 @@ th, td{
 
 .sociales a{
     text-decoration: none;
-<<<<<<< HEAD
-}
-=======
-    padding: 5px;
-    font-weight: 500;
-    font-size: 18px;
-    color: #ffffff;
-    background-color: #140946;
-    border-radius: 4px;
-    border: 2px solid #0016b0;
-    margin-top: 10px;
-}
-
-.filtrar:hover, .clear:hover {
-    background: rgba(0,0,0,0);
-    color: #3a7999;
-    box-shadow: inset 0 0 0 3px #140946;
-}
-
-.data{
-    grid-column: 2/4; 
-    grid-template-columns: repeat(1,24fr); 
-    background: #77878F;
-}
-.Tabla{
-    margin: auto;
-    background-color: white;
-    color: black;
-    font-family: arial;
-    border-collapse: collapse;
-}
-th,td{
-    padding: 0;
-    margin: 0;
-}
-td{
-    text-align: left;
-}
-tr:nth-child(even){
-    background-color: #ddd;
-}
-th{
-    background: #48507a;
-    padding: 5px;
     color: white;
 }
-tr:hover{
-    background-color: #5b75aa;
+
+@media(max-width:480px){
+    .container{
+        max-width: 40vw;
+    }
+    .left form{
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+        height: 45%;
+    }
+    .list_indicadores {
+        height: 40%;
+        width: 40%;
+    }
+    .left .form1 .opciones {
+        grid-row: 3/4;
+        grid-column: 1/3;
+        margin:auto;
+    }
+    .left .form1 .date {
+        grid-row: 4/5;
+        grid-column: 1/3;
+        margin:auto;
+    }
+    .left .form1 button {
+        grid-row: 5/6;
+    }
+    .pais {
+        margin: 3%;
+    }
+    .poblacion {
+        height: 25vh;
+    }
+    .Tabla {
+        width: 37%;
+    }
 }
-    
->>>>>>> a642074e0a8c205083ffb4a183359f9ad1b2cbf3
+
+@media(max-width:768px){
+    .container{
+        max-width: 80vw;
+    }
+    .left form{
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+        height: 90%;
+    }
+    .list_indicadores {
+        height: 80%;
+        width: 80%;
+    }
+    .left .form1 .opciones {
+        grid-row: 3/4;
+        grid-column: 1/3;
+        margin:auto;
+    }
+    .left .form1 .date {
+        grid-row: 4/5;
+        grid-column: 1/3;
+        margin:auto;
+    }
+    .left .form1 button {
+        grid-row: 5/6;
+    }
+    .pais {
+        margin: 3%;
+    }
+    .menu {
+        width: auto;
+        margin: auto;
+    }
+    li {
+        float: none;
+    }
+    .poblacion {
+        height: 50vh;
+    }
+    .Tabla {
+        width: 65%;
+    }
+}
