@@ -64,11 +64,6 @@ a:hover{
     margin: 0 10% 0 10%;
 } 
 
-.container{
-    max-width: 60vw;
-    background-color: #ecf0f1;
-}
-
 .box{
     display: grid;
 }
@@ -228,7 +223,6 @@ button:hover{
 .Tabla{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     outline: 1px solid black;
-    width:35%;
 }
 
 th, td{
