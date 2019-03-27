@@ -213,7 +213,9 @@ button:hover{
     background: rgb(201, 205, 207);
     max-width: 80vw;
 } 
-
+section{
+    margin: 0 10% 0 10%;
+}
 .margen-auto{
     margin: auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -223,6 +225,7 @@ button:hover{
 .Tabla{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     outline: 1px solid black;
+    width: 40%;
 }
 
 th, td{
