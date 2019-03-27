@@ -37,7 +37,6 @@ ul{
     background: #2c1e1e;
     line-height: 50px;
     overflow: auto;
-    position: center;
 }
 
 li{
@@ -62,14 +61,8 @@ a:hover{
 .poblacion{
     width: 80vw;
     height: 60%;
-    position: center;
     margin: 0 10% 0 10%;
 } 
-
-.container{
-    max-width: 60vw;
-    background-color: #ecf0f1;
-}
 
 .box{
     display: grid;
@@ -230,7 +223,6 @@ button:hover{
 .Tabla{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     outline: 1px solid black;
-    width:35%;
 }
 
 th, td{
