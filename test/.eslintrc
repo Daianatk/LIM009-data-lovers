@@ -4,6 +4,9 @@
     "mocha": true
   },
   "globals": {
-    "assert": false
+    "assert": false,
+    "WORLDBANK":false,
+    "bank":false,
+    "Chart":false
   }
 }

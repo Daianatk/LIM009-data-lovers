@@ -460,7 +460,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Proporcin de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
+        "indicatorName": "Proporcion de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.CACT.FM.ZS"
       },
       {
@@ -1912,7 +1912,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Índice de Capital Humano, femenino, límite inferior (escala de 0 a 1)",
+        "indicatorName": "Indice de Capital Humano, femenino, límite inferior (escala de 0 a 1)",
         "indicatorCode": "HD.HCI.OVRL.LB.FE"
       },
       {
@@ -1978,7 +1978,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Índice de Capital Humano, femenino (escala de 0 a 1)",
+        "indicatorName": "Indice de Capital Humano, femenino (escala de 0 a 1)",
         "indicatorCode": "HD.HCI.OVRL.FE"
       },
       {
@@ -8446,7 +8446,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Índice de Capital Humano, femenino, límite superior (escala de 0 a 1)",
+        "indicatorName": "Indice de Capital Humano, femenino, límite superior (escala de 0 a 1)",
         "indicatorCode": "HD.HCI.OVRL.UB.FE"
       },
       {
@@ -15646,7 +15646,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Índice de Capital Humano, femenino, límite superior (escala de 0 a 1)",
+        "indicatorName": "Indice de Capital Humano, femenino, límite superior (escala de 0 a 1)",
         "indicatorCode": "HD.HCI.OVRL.UB.FE"
       },
       {
@@ -16174,7 +16174,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Proporcin de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
+        "indicatorName": "Proporcion de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.CACT.FM.ZS"
       },
       {
@@ -17626,7 +17626,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Índice de Capital Humano, femenino, límite inferior (escala de 0 a 1)",
+        "indicatorName": "Indice de Capital Humano, femenino, límite inferior (escala de 0 a 1)",
         "indicatorCode": "HD.HCI.OVRL.LB.FE"
       },
       {
@@ -17692,7 +17692,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Índice de Capital Humano, femenino (escala de 0 a 1)",
+        "indicatorName": "Indice de Capital Humano, femenino (escala de 0 a 1)",
         "indicatorCode": "HD.HCI.OVRL.FE"
       },
       {
@@ -24826,7 +24826,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Índice de Capital Humano, femenino, límite superior (escala de 0 a 1)",
+        "indicatorName": "Indice de Capital Humano, femenino, límite superior (escala de 0 a 1)",
         "indicatorCode": "HD.HCI.OVRL.UB.FE"
       },
       {
@@ -25354,7 +25354,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Proporcin de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
+        "indicatorName": "Proporcion de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.CACT.FM.ZS"
       },
       {
@@ -26806,7 +26806,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Índice de Capital Humano, femenino, límite inferior (escala de 0 a 1)",
+        "indicatorName": "Indice de Capital Humano, femenino, límite inferior (escala de 0 a 1)",
         "indicatorCode": "HD.HCI.OVRL.LB.FE"
       },
       {
@@ -26872,7 +26872,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Índice de Capital Humano, femenino (escala de 0 a 1)",
+        "indicatorName": "Indice de Capital Humano, femenino (escala de 0 a 1)",
         "indicatorCode": "HD.HCI.OVRL.FE"
       },
       {
@@ -28000,7 +28000,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Proporcin de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
+        "indicatorName": "Proporcion de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)",
         "indicatorCode": "SL.TLF.CACT.FM.ZS"
       },
       {
@@ -29452,7 +29452,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Índice de Capital Humano, femenino, límite inferior (escala de 0 a 1)",
+        "indicatorName": "Indice de Capital Humano, femenino, límite inferior (escala de 0 a 1)",
         "indicatorCode": "HD.HCI.OVRL.LB.FE"
       },
       {
@@ -29518,7 +29518,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Índice de Capital Humano, femenino (escala de 0 a 1)",
+        "indicatorName": "Indice de Capital Humano, femenino (escala de 0 a 1)",
         "indicatorCode": "HD.HCI.OVRL.FE"
       },
       {
@@ -35986,7 +35986,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Índice de Capital Humano, femenino, límite superior (escala de 0 a 1)",
+        "indicatorName": "Indice de Capital Humano, femenino, límite superior (escala de 0 a 1)",
         "indicatorCode": "HD.HCI.OVRL.UB.FE"
       },
       {
