@@ -10,10 +10,7 @@
 </head>
 
 <body>
-  <header class="titulo texto">
-    <img class="logo " src="img\titulo.jpg">
-    <section> <img class="poblacion" src="img\poblacion.jpg"></section>
-  </header>
+  <main>
   <nav class="menu texto">
     <ul>
       <li><a class="aMenu">Descargar en xls</a></li>
@@ -22,22 +19,24 @@
       <li><a class="aMenu"> Ver Datos</a></li>
     </ul>
   </nav>
+  <header class="titulo texto">
+    <img class="logo" src="img\titulo.jpg">
+    <section> <img class="poblacion" src="img\poblacion.jpg"></section>
+  </header>
   <div class="container margen-auto">
     <aside class="box left texto colum1">
       <h2 class="margen-auto">¿Qué información desea revisar?</h2>
       <form class="form1 colum1 margen-auto" id="form1">
         <h3 class="label1 columAll margen-auto">Indicadores:</h3>
-        <select id="List" class="list_indicadores columAll margen-auto">
+          <select id="List" class="list_indicadores columAll margen-auto">
           <option value="" disabled selected>--Seleccione un indicardor--</option>
         </select>
-
         <div class="opciones cuadro colum1 margen-auto">
           <h3 class="label2 columAll">Selecciona un Pais</h3>
           <div id="paises" class="paises margen-auto"></div>
         </div>
         <button type="button" class="filtrar margen-auto" id="filter">Filtrar</button>
         <button type="button" class="clear  margen-auto" id="borrar">Limpiar</button>
-
         <div class="date cuadro colum2 margen-auto">
           <h3 class="label3 columAll">Seleccione los años</h3>
           <label class="from colum1 texto margen-auto">Desde</label>
@@ -47,12 +46,14 @@
         </div>
       </form>
     </aside>
-    <section class="data texto colum1" id="sectionDta">
+  </div>
+  <div class="mostrar">
+    <div class="data texto colum1" id="sectionDta">
       <table type="table" id="dta_ages" class="Tabla margen-auto"></table>
-    </section>
-    <section class="graphic">
+    </div>
+    <div class="graphic">
       <canvas id="line-chart"></canvas>
-    </section>
+    </div>
   </div>
   <footer>
     <div class="contenedorFooter">
@@ -65,11 +66,12 @@
       </div>
     </div>
   </footer>
-  <script src="data/worldbank/worldbank.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-<script src="js/graphic.js"></script>
+</main>
+    <script src="data/worldbank/worldbank.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="js/graphic.js"></script>
 </body>
 
 </html>

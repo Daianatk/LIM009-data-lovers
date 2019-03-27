@@ -1,4 +1,4 @@
-const List_indicators = document.getElementById("List");
+const list_indicators = document.getElementById("List");
 const generateList = (arreglo) => {
     let string = `<option disabled selected>----Seleccione un indicador----</option>`;
     for (let x = 0; x < arreglo.length; x++) {
@@ -6,13 +6,13 @@ const generateList = (arreglo) => {
     }
     return string;
 };
-List_indicators.innerHTML = generateList(bank.arrayOfIndicators("PER", WORLDBANK));
+list_indicators.innerHTML = generateList(bank.arrayOfIndicators("PER", WORLDBANK));
 
 const listCountries = document.getElementById("paises");
 const printCountries = (countries) => {
     let pais = '';
     for (let i = 0; i < countries.length; i++) {
-        pais += `<input type="checkbox"  class="pais ${countries[i]} " name="countrySelect" value='${countries[i]}'/> ${countries[i]}`;
+        pais += `<input type="checkbox" class="pais ${countries[i]} " name="countrySelect" value='${countries[i]}'/> <label>${countries[i]}</label>`;
     }
     return pais;
 };
