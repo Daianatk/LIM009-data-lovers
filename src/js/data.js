@@ -19,19 +19,19 @@ window.bank = {
       let arrindicators = indicatorsOfArray[n];
       array.push(arrindicators['indicatorName']);
     }
-    return array;
+    return array.sort();
   },
 
   objectOfdata: (country, indicador, dat) => {   //recibe como parametros un pais y un indicador, y retorna la data correspondiente 
-    let arrIndicator = bank.arrayOfIndicators(country, dat);
+    let arrIndicator = bank.arrayOfIndicators(country, dat)
     let arrResult = dat[country]["indicators"];
-    let datThree = "";
+    let objResult = [];
     for (let i = 0; i < arrIndicator.length; i++) {
       if (arrIndicator[i] == indicador) {
-        datThree = arrResult[i]["data"];
+        objResult = arrResult[i]["data"];
       }
     }
-    return datThree;
+    return objResult;
   },
   paisSelected: (names) => {
     let arrPaises = document.getElementsByName(names);
@@ -43,26 +43,33 @@ window.bank = {
       }
     }
   },
-  intervalYears: (idFrom, idTo) => {
+  arrValuesSelect: (arrSelect,countrySelect,indicatorSelect,data) => {
+    let objData = bank.objectOfdata(countrySelect, indicatorSelect,data )
+    let newArr=[];
+    for (let j = 0; j < arrSelect.length; j++) {
+      if (objData[arrSelect[j]] !== "") {
+          newArr.push(objData[arrSelect[j]])
+      }
+    }
+    return newArr;
+  },
+  intervalYears: (idFrom, idTo,pais,indicador,data) => {
+    let obj = bank.objectOfdata( pais, indicador,data);
     let From = parseInt(document.getElementById(idFrom).value);
-    let To = parseInt(document.getElementById(idTo).value);
+    let To= parseInt(document.getElementById(idTo).value);
     let arrYears = [];
     for (let i = From + 1960; i <= To + 1960; i++) {
       arrYears.push(i);
     }
-    return arrYears;
+    let arrYearsNew=[];
+    arrYears.forEach(function(element){
+      if(obj[element]!==""){
+        arrYearsNew.push(element);
+      }
+    });
+    return arrYearsNew;
   },
-  arrValuesSelect: (arrSelect,idpais,idindicador) => {
-    let countrySelect = bank.paisSelected(idpais);
-    let indicatorSelect = document.getElementById(idindicador).value;
-    let objData = bank.objectOfdata(countrySelect, indicatorSelect, WORLDBANK);
-    let arrvalues = [];
-    for (let i = 0; i <= arrSelect.length; i++) {
-      arrvalues.push(objData[arrSelect[i]]);
-    }
-    return arrvalues;
-  },
-  arrValues: (idpais, idindicador) => {
+  arrValues: (idpais, idindicador) => {   
     let countrySelect = bank.paisSelected(idpais);
     let indicatorSelect = document.getElementById(idindicador).value;
     let objDtaAll = bank.objectOfdata(countrySelect, indicatorSelect, WORLDBANK);
@@ -73,4 +80,9 @@ window.bank = {
     }
     return valores;
   },
+  roundTwo:(numero)=>{
+    var flotante = parseFloat(numero);
+    var resultado = Math.round(flotante*1000)/1000;
+    return resultado;
+    }
 };

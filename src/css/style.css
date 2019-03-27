@@ -15,31 +15,27 @@ box-sizing: border-box;
 
 body{
     font-family: sans-serif;
+    width:100vw;
 }
 
 .logo {
-    width: 25%; 
+    width: 55%; 
     height: auto;
     margin-top: 5%;
-}
-.poblacion{
-    width: 60vw;
-    height: 80%;
-    position: center;
-    margin: 0 10% 0 10%;
 }
 
 .menu{
     position: fixed;
-    width: 60vw;
-    margin: 0 20% 0 20%;
+    top:0;
+    width: 80vw;
+    margin: 0 10% 0 10%;
 }
 
 ul{
     padding: 0;
     list-style: none;
-    background: rgba(15, 2, 75, 0.9);;
-    line-height: 60px;
+    background: #2c1e1e;
+    line-height: 50px;
     overflow: auto;
 }
 
@@ -62,10 +58,11 @@ a:hover{
     color: rgba(48, 47, 47, 0.6);  
 }
 
-.container{
-    max-width: 60vw;
-    background-color: #ecf0f1;
-}
+.poblacion{
+    width: 80vw;
+    height: 60%;
+    margin: 0 10% 0 10%;
+} 
 
 .box{
     display: grid;
@@ -80,12 +77,6 @@ a:hover{
     text-align: center;
 }
 
-.mostrar{
-    background:white;
-    max-width: 60vw;
-    margin: 0 20% 0 20%;
-}
-
 .left h2{
     grid-row: 1/2;
     width: 90%;
@@ -96,11 +87,12 @@ a:hover{
 .left form{
     grid-row: 2/3;
     width: 80%;
-    display: grid;  
-    grid-template-columns: 6fr 6fr; 
-    grid-template-rows:1fr 1fr 3fr 1fr; 
+   display: grid;  
+   grid-template-columns: 6fr 6fr; 
+   grid-template-rows:1fr 1fr 3fr 1fr; 
     height: 70%;
     border-radius: 10px;
+    border: 1px solid black;
 }
 
 .cuadro{
@@ -217,8 +209,8 @@ button:hover{
     margin-left: 5%;
 }
 
-.data{
-    background: rgb(214, 218, 219);
+ .data{
+    background: rgb(201, 205, 207);
     max-width: 80vw;
 } 
 
@@ -230,7 +222,7 @@ button:hover{
 
 .Tabla{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width:35%;
+    outline: 1px solid black;
 }
 
 th, td{
@@ -254,13 +246,92 @@ th, td{
 }
 
 .sociales {
-    width: 80%;
+    width: 100%;
     text-align: center;
-    font-size: 15px;
+    font-size: 28px;
     background-color: rgba(16, 2, 77);
 }
 
 .sociales a{
     text-decoration: none;
     color: white;
+}
+
+@media(max-width:480px){
+    .container{
+        max-width: 40vw;
+    }
+    .left form{
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+        height: 45%;
+    }
+    .list_indicadores {
+        height: 40%;
+        width: 40%;
+    }
+    .left .form1 .opciones {
+        grid-row: 3/4;
+        grid-column: 1/3;
+        margin:auto;
+    }
+    .left .form1 .date {
+        grid-row: 4/5;
+        grid-column: 1/3;
+        margin:auto;
+    }
+    .left .form1 button {
+        grid-row: 5/6;
+    }
+    .pais {
+        margin: 3%;
+    }
+    .poblacion {
+        height: 25vh;
+    }
+    .Tabla {
+        width: 37%;
+    }
+}
+
+@media(max-width:768px){
+    .container{
+        max-width: 80vw;
+    }
+    .left form{
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+        height: 90%;
+    }
+    .list_indicadores {
+        height: 80%;
+        width: 80%;
+    }
+    .left .form1 .opciones {
+        grid-row: 3/4;
+        grid-column: 1/3;
+        margin:auto;
+    }
+    .left .form1 .date {
+        grid-row: 4/5;
+        grid-column: 1/3;
+        margin:auto;
+    }
+    .left .form1 button {
+        grid-row: 5/6;
+    }
+    .pais {
+        margin: 3%;
+    }
+    .menu {
+        width: auto;
+        margin: auto;
+    }
+    li {
+        float: none;
+    }
+    .poblacion {
+        height: 50vh;
+    }
+    .Tabla {
+        width: 65%;
+    }
 }

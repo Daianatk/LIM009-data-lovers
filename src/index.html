@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
-
 <head>
   <meta charset="utf-8">
   <title>Data WorldBank</title>
@@ -10,11 +8,14 @@
 </head>
 
 <body>
-  <main>
+  <header class="titulo texto">
+    <img class="logo " src="img\titulo.jpg">
+    <section> <img class="poblacion" src="img\poblacion.jpg"></section>
+  </header>
   <nav class="menu texto">
     <ul>
       <li><a class="aMenu">Descargar en xls</a></li>
-      <li><a class="aMenu">Ver estadísticos</a></li>
+      <li><a class="aMenu" id="SeeStatics">Ver estadísticos</a></li>
       <li><a class="aMenu" id="SeeGraphic">Ver gráfico</a></li>
       <li><a class="aMenu"> Ver Datos</a></li>
     </ul>
@@ -28,7 +29,7 @@
       <h2 class="margen-auto">¿Qué información desea revisar?</h2>
       <form class="form1 colum1 margen-auto" id="form1">
         <h3 class="label1 columAll margen-auto">Indicadores:</h3>
-          <select id="List" class="list_indicadores columAll margen-auto">
+        <select id="List" class="list_indicadores columAll margen-auto">
           <option value="" disabled selected>--Seleccione un indicardor--</option>
         </select>
         <div class="opciones cuadro colum1 margen-auto">
@@ -46,14 +47,15 @@
         </div>
       </form>
     </aside>
-  </div>
-  <div class="mostrar">
-    <div class="data texto colum1" id="sectionDta">
+    <section class="data texto colum1" id="sectionDta">
       <table type="table" id="dta_ages" class="Tabla margen-auto"></table>
-    </div>
-    <div class="graphic">
+    </section>
+    <section class="graphic">
       <canvas id="line-chart"></canvas>
-    </div>
+    </section>
+    <section class="statics">
+      <table class="statics-Table" id="staticsTable"></table>
+    </section>
   </div>
   <footer>
     <div class="contenedorFooter">
@@ -66,12 +68,10 @@
       </div>
     </div>
   </footer>
-</main>
-    <script src="data/worldbank/worldbank.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-    <script src="js/graphic.js"></script>
+  <script src="data/worldbank/worldbank.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+<script src="js/graphic.js"></script>
 </body>
-
 </html>
