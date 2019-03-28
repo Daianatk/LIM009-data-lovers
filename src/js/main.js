@@ -95,6 +95,7 @@ mostrarStatics.addEventListener("click", function () {
 
 const limpiarFormulario = () => {
     document.getElementById("form1").reset();
+    
 };
 const clearForm = document.getElementById('borrar');
 clearForm.addEventListener("click", limpiarFormulario);
