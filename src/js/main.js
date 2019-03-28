@@ -12,7 +12,7 @@ const listCountries = document.getElementById("paises");
 const printCountries = (countries) => {
     let pais = '';
     for (let i = 0; i < countries.length; i++) {
-        pais += `<input type="checkbox" class="pais ${countries[i]} " name="countrySelect" value='${countries[i]}'/> <label>${countries[i]}</label>`;
+        pais += `<input type="radio" class="pais ${countries[i]} " name="countrySelect" value='${countries[i]}'/><label>${countries[i]}</label>`;
     }
     return pais;
 };
@@ -39,8 +39,8 @@ const genera_tabla = (idIndicator, idFrom, idTo, idShow, idCountry) => {
     let showData = bank.objectOfdata(nameCountry, indicatorSelected, WORLDBANK);
     let arrayData = Object.keys(showData);                       //los años en un arrayh
     let valores = bank.arrValues(idCountry, idIndicator);       //valores por año
-    let From = document.getElementById(idFrom).value;
-    let To= document.getElementById(idTo).value;
+    let From = parseInt(document.getElementById(idFrom).value);
+    let To= parseInt(document.getElementById(idTo).value);
     const box = document.getElementById(idShow);
     box.innerHTML = `<tr><caption>${nameCountry} : ${indicatorSelected}</caption></tr><tr><th>Año</th><th>Dato</th></tr>`;
     for (let i = From; i <=To; i++) {
