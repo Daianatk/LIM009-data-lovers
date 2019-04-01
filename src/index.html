@@ -1,80 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Data WorldBank</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="css/fontello.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+	<link rel="stylesheet" href="fonts/style.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menu.css">
+	<title>Data WorldBank</title>
 </head>
 <body>
-    <header>
-        <div class="contenedor">
-            <img class="logo" src="img\titulo.jpg">
-            <input type="checkbox" id="menu-bar">
-            <label class="fontawesome-align-justify" for="menu-bar"></label>
-                    <nav class="menu">
-                        <a href="">Descargar XLS</a>
-                        <a href="">Estadistica</a>
-                        <a href="">Gràfico</a>
-                        <a href="">Datos</a>
-                    </nav>
-                </div>
-    </header>
-            <main>
-                <section id="banner" class="contenedor">
-                    <img src="img\poblacion.jpg">
-                </section>
-                <section id="bienvenidos">
-                <h3>¿Seleccione los datos que desea revisar?</h3>
-                <div class="contenedor">
-                    <aside>
-                    <form class="form1">
-                        <h3 class="label1 columAll">Indicadores:</h3>
-                        <select id="List" class="list_indicadores columAll" onchange="filterName()">
-                        <option value="" disabled selected>--Seleccione un Indicador--</option>
-                        </select>
-                        <div class="opciones cuadro columAll">
-                            <h3 class="label2 columAll">Selecciona un Pais:</h3>
-                            <div id="paises"></div>
-                        </div>
-                              <div class="date cuadro columAll">
-                                <h3 class="label3 columAll">Seleccione los años:</h3>
-                                <label class="from colum1">Desde:</label>
-                                <select id="Age-1" class="fromAges colum2"></select>
-                                <label class="to colum1">Hasta:</label>
-                                <select id="Age-2" class="toAges colum2"></select>
-                              </div>
-                              <button type="button" class="filtrar" id="filter">Filtrar</button>
-                              <button type="button" class="clear" id="borrar">Limpiar</button>
-                            </form>
-                        </aside>
-                </div>
-                </section>
-            
-                <section id="sectionDta" class="contenedor">
-                    <h3>La data por Año seleccionada es:</h3>
-                    <div class="contenedor">
-                        <p id="demo"></p>
-                        <table type="table" id="dta_ages" class="Tabla"></table>
-                    </div>
-                </section>
-            </main>
-            
-            <footer>
-                <div class="contenedor">
-                    <p class="copy">Copyright &copy; 2019 Todos los derechos reservados</p>
-                    <div class="sociales">
-                        <a class="fontawesome-facebook-sign" href="#"></a>
-                        <a class="fontawesome-twitter" href="#"></a>
-                        <a class="fontawesome-camera-retro" href="#"></a>
-                        <a class="fontawesome-google-plus-sign" href="#"></a>
-                    </div>
-                </div>
-            </footer>
-    <script src="data/worldbank/worldbank.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+	<div class="contenedor">
+		<header class="header">
+			<img class="logo " src="img/titulo.jpg">
+		</header>
+		<div class="tabla">
+			<div class="data texto colum1" id="sectionDta">
+				<table type="table" id="dta_ages" class="Tabla margen-auto"></table>
+			</div>
+		</div>
+		<main class="formulario">
+			<div class="botones">
+				<ul>
+					<button type="button" class="filtrar margen-auto" id="filter"><span class="icon-filter"></span>Filtrar</button>
+					<button type="button" class="graph  margen-auto" id="SeeGraphic"><span class="icon-stats"></span>Graficar</button>
+					<button type="button" class="stactics margen-auto" id="SeeStatics"><span class="icon-bars"></span>Estadística</button>
+					<button type="button" class="clear  margen-auto" id="borrar"><span class="icon-loop"></span>Limpiar</button>
+				</ul>
+			</div>
+			<div class="form">
+					<form class="form1" id="form1">
+						<a class="label1 row-1">Elija el indicador que desee revisar</a>
+					  <select id="List" class="list-indicators">
+					  </select>
+					  <div class="opciones cuadro colum1 margen-auto">
+						<h3 class="label2 row-1 columAll">Seleccione un Pais</h3>
+						<div id="paises" class="paises margen-auto"></div>
+					  </div>
+					  <div class="date cuadro colum2 margen-auto">
+						<h3 class="label3 row-1 columAll">Seleccione los años</h3>
+						<label class="from  texto margen-auto">Desde:</label>
+						<select id="Age-1" class="fromAges colum2 years margen-auto"></select>
+						<label class="to  texto margen-auto">Hasta:</label>
+						<select id="Age-2" class="toAges colum2 years margen-auto"></select>
+					  </div>
+					</form>
+				</div>
+				<div class="grafico">
+					<div class="graphic">
+						<canvas id="line-chart"></canvas>
+				</div>
+				</div>
+		</main>
+			<div class="estadistico">
+				<div class="row-1">
+					<table class="statics-Table margen-auto" id="staticsTable"></table>
+				</div>
+			</div>
+		<footer class="footer">
+			<div class="contenedorFooter">
+				<p class="copy">Copyright &copy; 2019 Todos los derechos reservados</p>
+				<div class="sociales">
+					<span class="icon-facebook" href="#"></span>
+					<span class="icon-twitter" href="#"></span>
+					<span class="icon-instagram" href="#"></span>
+					<span class="icon-google" href="#"></span>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="data/worldbank/worldbank.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+	<script src="js/graphic.js"></script>
 </body>
 </html>
