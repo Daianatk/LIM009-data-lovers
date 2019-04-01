@@ -32,6 +32,8 @@
      height: 10%;
      width: 100vw;
      background: white;
+     top: 2%;
+     left: 2%;
  }
  p{
      font-family: bold;
@@ -77,10 +79,16 @@
      display: inline-block;
      margin-left: 5%
  }
+ .text-justificy{
+     margin-left:0;
+     text-align: left; 
+     grid-column: 1/12;
+     grid-row:1/2; 
+ }
 
  .text-prev a {
      cursor: pointer;
-     color: red;
+     color: blue;
      font-size: 90%;
      float: right;
      margin-right: 5%;
@@ -93,7 +101,7 @@
 
  .form1 {
      width: 90%;
-     height: 80%;
+     height: 100%;
      display: grid;
      grid-template-rows: repeat(9, 1fr);
      grid-template-columns: repeat(12, 1fr);
@@ -205,8 +213,8 @@
  /*CONTENIDO EN GENERAL*/
 
  .logo {
-     width: 40%;
-     height: 100%;
+     width: 15%;
+     height: 70%;
      float: left;
  }
 
@@ -293,5 +301,7 @@
         top:145%;
         color: black;
     }
-
+    .logo {
+        width: 30%;
+    }
 }

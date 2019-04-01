@@ -1,4 +1,32 @@
 
+const FunctionsAdd={
+     paisSelected: (names) => {
+        let arrPaises = document.getElementsByName(names);
+        let seleccion = "";
+        for (let i = 0; i < arrPaises.length; i++) {
+          if (arrPaises[i].checked == true) {
+            seleccion = arrPaises[i].value;
+            return seleccion;
+          }
+        }
+      },
+     intervalYears: (idFrom, idTo, obj) => {
+        let From = parseInt(document.getElementById(idFrom).value);
+        let To = parseInt(document.getElementById(idTo).value);
+        let arrYears = [];
+        for (let i = From + 1960; i <= To + 1960; i++) {
+          arrYears.push(i);
+        }
+        let arrYearsNew = [];
+        arrYears.forEach(function (element) {
+          if (obj[element] !== "") {
+            arrYearsNew.push(element);
+          }
+        });
+        return arrYearsNew;
+      },
+}
+
 const List_indicators = document.getElementById("List");
 const generateList = (arreglo) => {
     let string = `<option disabled selected>----Seleccione un indicador----</option>`;
@@ -7,6 +35,8 @@ const generateList = (arreglo) => {
     }
     return string;
 };
+
+
 List_indicators.innerHTML = generateList(DATABANK.arrayOfIndicators(WORLDBANK));
 const listCountries = document.getElementById("paises");
 const printCountries = (countries) => {
@@ -33,11 +63,13 @@ selectYearsFrom.innerHTML = generateYears(objectExample);
 const selectYearsTwo = document.getElementById("Age-2");
 selectYearsTwo.innerHTML = generateYears(objectExample);
 
+
+
 const genera_tabla = (idIndicator, idFrom, idTo, idShow, idCountry) => {
     let indicatorSelected = document.getElementById(idIndicator).value;
-    let nameCountry = DATABANK.paisSelected(idCountry);
+    let nameCountry = FunctionsAdd.paisSelected(idCountry);
     let showData = DATABANK.filterData(nameCountry, indicatorSelected, WORLDBANK,"data");
-    let arrAños = DATABANK.intervalYears(idFrom, idTo, showData);
+    let arrAños =FunctionsAdd.intervalYears(idFrom, idTo, showData);
     const box = document.getElementById(idShow);
     box.innerHTML = `<tr><caption>${nameCountry} : ${indicatorSelected}</caption></tr><tr><th>Año</th><th>Dato</th></tr>`;
     arrAños.forEach(function (element) {
@@ -56,10 +88,10 @@ generateTable.addEventListener("click", function () {
 
 const generateStatics = (idtable, idCountry, idIndicator, idFrom, idTo) => {
     const tableOfStatics = document.getElementById(idtable);
-    let nameCountry = DATABANK.paisSelected(idCountry);
+    let nameCountry = FunctionsAdd.paisSelected(idCountry);
     let indicatorSelected = document.getElementById(idIndicator).value;
     let objeto = DATABANK.filterData(nameCountry, indicatorSelected, WORLDBANK,"data");
-    let años = DATABANK.intervalYears(idFrom, idTo, objeto);
+    let años =FunctionsAdd.intervalYears(idFrom, idTo, objeto);
     let arr = [];
     tableOfStatics.innerHTML = `<tr><caption>${nameCountry} : ${indicatorSelected}</caption></tr><tr><th>Media</th><th>Mediana(Me)</th><th>Varianza</th><th>Error o desv. Estandar</th><th>Mínimo</th><th>Máximo</th></tr>`;
     for (let i = 0; i < años.length; i++) {

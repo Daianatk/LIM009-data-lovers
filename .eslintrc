@@ -11,6 +11,7 @@
     "WORLDBANK":false,
     "DATABANK":false,
     "Chart":false,
-    "Set":true
+    "Set":true,
+    "FunctionsAdd":false
   }
 }
