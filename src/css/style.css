@@ -70,6 +70,7 @@ body {
 
 .botones{
 	text-align: right;
+	cursor: pointer;
 }
 
 .filtrar, .graph, .stactics, .clear {
@@ -101,7 +102,7 @@ body {
 	margin: 10px;
 }
 
-.Tabla {
+.tabla {
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	border: 0.1px solid #3093d4;
 	font-size: 14px;
