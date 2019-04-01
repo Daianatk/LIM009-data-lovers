@@ -30,9 +30,9 @@ b.	Funcionalidad:
 -    Mostrar los indicadores dentro de una Lista en HTML en la cual el usuario seleccione el índice que desea ver, y esta se muestre en el contenido de la web como un título.
  
 c. 	Estructura HTML:
--       Dentro del body crear un header con un contenedor para insertar una imagen e implementar el menú en esta zona si se estipula necesario.
+-       Dentro del body crear un header con un contenedor para insertar una imagen e implementar el menú.
 -       Crear un banner para insertar una imagen.
--      Crear un contenedor y un formulario para implementar el elemento lista dentro del body.
+-       Crear un contenedor y un formulario para implementar el elemento lista dentro del body.
 -       Dentro del contenido de la web se mostrará el título del indicador elegido
 -       Crear un footer.
 
