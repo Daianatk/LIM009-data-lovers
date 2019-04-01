@@ -1,16 +1,18 @@
-global.window = global;
 global.assert = require('chai').assert;
 require('../src/data');
 require('./data.spec.js');
 
 
-describe('example', () => {
+describe('getUniqueCountry', () => {
   
-  it('debería ser una función', () => {
-    assert.equal(typeof example, 'function');
+  it('debería ser una funcion', () => {
+    expect(typeof getUniqueCountry).toBe('function');
   });
 
-  it('debería retornar "example"', () => {
-    assert.equal(example(), 'example');
-  });
-})
+ it('debería retornar "["PER","MEX","BRA","CHL"]"', () => {
+    expect(window.getUniqueCountry(WORLDBANK)).toBe('["PER","MEX","BRA","CHL"]');
+  }); 
+});
+
+/* window.getUniqueCountry = object;
+object(); */

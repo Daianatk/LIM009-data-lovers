@@ -1,12 +1,4 @@
-{
-  "env": {
-    "node": true,
-    "jest": true
-  },
-  "globals": {
-    "assert": false
-  },
-  "rules": {
+"rules": {
     "allowTernary": true,
     "linebreak-style": 0,
     "global-require": 0,
@@ -34,5 +26,4 @@
     "no-array-constructor": 1,
     "no-const-assign": "error",
     "no-var": "error"
- }
-}
+ },

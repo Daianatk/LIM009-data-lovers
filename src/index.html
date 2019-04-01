@@ -7,72 +7,83 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
-  <nav class="menu texto">
-    <input type="checkbox" class="checkbox" id="check" />
-    <label for="check" class="label-menu">|||</label>
-      <div class="content-form">
-
-        <form class="form1 colum1 margen-auto" id="form1">
-            <a class="row-1">¿Qué información desea revisar?</a>
-          <select id="List" class="list-indicadores col-All margen-auto">
-          </select>
-          <div class="opciones cuadro colum1 margen-auto">
-            <h3 class="label2 row-1 columAll">Seleccione un Pais</h3>
-            <div id="paises" class="paises margen-auto"></div>
-          </div>
-          <div class="date cuadro colum2 margen-auto">
-            <h3 class="label3 row-1 columAll">Seleccione los años</h3>
-            <label class="from  texto margen-auto">Desde:</label>
-            <select id="Age-1" class="fromAges colum2 years margen-auto"></select>
-            <label class="to  texto margen-auto">Hasta:</label>
-            <select id="Age-2" class="toAges colum2 years margen-auto"></select>
-          </div>
-          <button type="button" class="filtrar margen-auto" id="filter">Filtrar</button>
-          <button type="button" class="clear  margen-auto" id="borrar">Limpiar</button>
-          <button type="button" class="stactics margen-auto" id="SeeStatics">Estadísticos</a></button>
-          <button type="button" class="graph  margen-auto" id="SeeGraphic">Graficar</a></button>
-        </form>
-      </div>
+  <header class="titulo margen-auto position-fixed">
+    <img class="logo" src="img\titulo.jpg">
+  </header>
+  <nav class="chart-statics position-fixed">
+    <button type="button" class="stactics margen-auto" id="SeeStatics"><i
+        class="fas fa-chart-bar icono"></i><a>Estadísticos</a></button>
+    <button type="button" class="graph  margen-auto" id="SeeGraphic"><i
+        class="fas fa-chart-line icono"></i><a>Graficar</a></button>
+    <button type="button" class="filtrar margen-auto" id="filter"><i class="fas fa-database icono"></i><a>Ver
+        Datos</a></button>
   </nav>
 
-  <div class="container margen-auto">
-    <header class="titulo texto">
-      <img class="logo " src="img\titulo.jpg">
-      <!--   <img class="poblacion" src="img\poblacion.jpg"> -->
-    </header>
-     <main class="secciones">
-      <div class="data texto colum1" id="sectionDta">
-      <table type="table" id="dta_ages" class="Tabla margen-auto"></table>
-      </div>
-      <div class="graphic">
-        <canvas id="line-chart"></canvas>
-      </div>
-      <div class=" row-1">
-        <table class="statics-Table margen-auto" id="staticsTable"></table>
-      </div>
-    </main>
-
-    <footer>
-      <div class="contenedorFooter">
-        <p class="copy">Copyright &copy; 2019 Todos los derechos reservados</p>
-        <div class="sociales">
-          <a class="fontawesome-facebook-sign" href="#"></a>
-          <a class="fontawesome-twitter" href="#"></a>
-          <a class="fontawesome-camera-retro" href="#"></a>
-          <a class="fontawesome-google-plus-sign" href="#"></a>
+  <div class="menu">
+    <div class="text-prev position-fixed">
+      <h2> Vista preliminar:</h2><a class="clear" id="borrar">(Limpiar selección)</a>
+    </div>
+    <div class="content-form position-fixed">
+      <form class="form1 colum1 margen-auto" id="form1">
+        <a class="row-1">¿Qué información desea revisar?</a>
+        <select id="List" class="list-indicadores col-All margen-auto">
+        </select>
+        <div class="opciones cuadro colum1 margen-auto">
+          <h3 class="label2 row-1 columAll">Seleccione un Pais</h3>
+          <div id="paises" class="paises margen-auto"></div>
         </div>
-      </div>
-    </footer>
+        <div class="date cuadro colum2 margen-auto">
+          <h3 class="label3 row-1 columAll">Seleccione los años</h3>
+          <label class="from  margen-auto">Desde:</label>
+          <select id="Age-1" class="fromAges colum2 years margen-auto"></select>
+          <label class="to  margen-auto">Hasta:</label>
+          <select id="Age-2" class="toAges colum2 years margen-auto"></select>
+        </div>
+
+      </form>
+    </div>
   </div>
+
+  <div class="container position-fixed">
+    <main class="secciones" >
+      <section class="seccion-1" id="seccion-1">
+        <div class="data margen-auto data-section" id="sectionDta">
+          <table type="table" id="tabla" class="Tabla margen-auto"></table>
+        </div>
+      </section>
+      <section class="seccion-2 margen-auto data-section" id="seccion-2">
+        <div class="graphic">
+          <canvas id="line-chart"></canvas>
+        </div>
+      </section>
+      <section class="seccion-3 margen-auto data-section" id="seccion-3">
+        <div class=" row-1">
+          <table class="statics-Table" id="staticsTable"></table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer class="position-fixed">
+    <div class="contenedorFooter">
+      <p class="copy">Copyright &copy; 2019 Todos los derechos reservados</p>
+      <div class="sociales">
+        <a class="fontawesome-facebook-sign" href="#"></a>
+        <a class="fontawesome-twitter" href="#"></a>
+        <a class="fontawesome-camera-retro" href="#"></a>
+        <a class="fontawesome-google-plus-sign" href="#"></a>
+      </div>
+    </div>
+  </footer>
   <script src="data/worldbank/worldbank.js"></script>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-  <script src="js/graphic.js"></script>
-</body>
+ <script src="js/graphic.js"></script>
+ </body>
 
 </html>

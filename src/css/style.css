@@ -13,55 +13,81 @@
  }
 
  body {
-     font-family: sans-serif;
- }
-
- nav {
-     font-family: 'Lobster', cursive;
- }
-
- .label-menu {
-     width: 2.2rem;
-     height: 2.7rem;
-     background: #191970;
-     border-radius: 0.5 rem;
-     position: fixed;
-     top: 50%;
-     left: 5%;
-     font-family: sans-serif;
-     font-size: 2rem;
-     color: white;
+     font-family: 'Open Sans', sans-serif;
+     background-color: white;
      text-align: center;
-     transition: left 0.7s;
  }
-
- .checkbox:checked~.label-menu {
-     left: 40%;
-     border-radius: 0 0.5rem 0.5rem 0;
+ .position-fixed{
+    position: fixed;
  }
-
  .content-form {
      width: 40%;
-     height: 100%;
-     background: linear-gradient(to left, #191970, white);
-     position: fixed;
-     top: 0;
-     left: -40%;
+     height: 80%;
+     background-color: white;
      display: flex;
-     transition: left 0.4s;
+     top: 10%;
+     border:2px solid #E9ECF4;
  }
-
- .checkbox:checked~.content-form {
-     left: 0;
- }
-
- .checkbox {
-     display: none;
- }
-
  .titulo {
-     grid-row: 2/3;
+     height: 10%;
+     width: 100vw;
+     background: white;
+ }
+ p{
+     font-family: bold;
+ }
+
+ .chart-statics {
+     height: 5%;
+     left: 40%;
+     right: 0;
+     top: 10%;
+     border-top: 2px solid #E9ECF4;
+ }
+
+ .chart-statics button {
+     float: right;
+     margin-right: 5%;
+     text-decoration: none;
+     width: 15%;
+     height: 90%;
+     background-color: #f0f8ff;
+ }
+
+ .chart-statics button:hover {
+     background: #3093d4;
+     color: white;
+ }
+
+ .icono {
+     margin: 2%;
+ }
+
+ .text-prev {
+     height: 5%;
+     left: 40%;
+     top: 15%;
+     right: 0;
+     font-size: 120%;
+     border: 2px solid #E9ECF4;
+ }
+
+ h2 {
+     display: inline-block;
+     margin-left: 5%
+ }
+
+ .text-prev a {
+     cursor: pointer;
+     color: red;
+     font-size: 90%;
+     float: right;
+     margin-right: 5%;
+ }
+
+ .secciones {
      grid-column: 3/11;
+     grid-row: 3/4;
  }
 
  .form1 {
@@ -72,15 +98,15 @@
      grid-template-columns: repeat(12, 1fr);
  }
 
- a {
-     grid-column: 2/12;
+ .form1 a {
+     grid-column: 1/12;
  }
 
  .list-indicadores {
-     grid-column: 2/12;
-     grid-row: 4/5;
+     grid-column: 1/12;
+     grid-row: 5/6;
      width: 100%;
-     height: 60%;
+     height: 70%;
  }
 
  .cuadro {
@@ -88,55 +114,30 @@
      border-radius: 10px;
      height: 100%;
      width: 100%;
-     grid-column: 2/11;
+     grid-column: 1/13;
  }
 
  .opciones {
-     grid-row: 2/4;
+     grid-row: 2/5;
      display: grid;
      grid-template-rows: repeat(3, 1fr);
      grid-template-columns: repeat(4, 1fr);
  }
 
  .date {
-     grid-row: 5/7;
+     grid-row: 6/9;
      display: grid;
      grid-template-rows: repeat(3, 1fr);
      grid-template-columns: repeat(2, 1fr);
  }
 
- button {
+ .form1 button {
      height: 70%;
      width: 100%;
      cursor: pointer;
      color: white;
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
      background: rgb(22, 22, 22);
- }
-
- button:hover {
-     background: skyblue;
-     color: rgba(48, 47, 47, 0.6);
- }
-
- .filtrar {
-     grid-row: 7/8;
-     grid-column: 2/6;
- }
-
- .clear {
-     grid-row: 7/8;
-     grid-column: 7/11;
- }
-
- .stactics {
-     grid-row: 8/9;
-     grid-column: 2/6;
- }
-
- .graph {
-     grid-row: 8/9;
-     grid-column: 7/11;
  }
 
  .margen-auto {
@@ -149,9 +150,11 @@
  }
 
  /* GRID PARA CUADROS DEL FORM*/
-.row-1{
-    grid-row: 1/2;
-}
+
+ .row-1 {
+     grid-row: 1/2;
+ }
+
  .label2 {
      grid-column: 1/5;
  }
@@ -201,96 +204,81 @@
  /*CONTENIDO EN GENERAL*/
 
  .logo {
-     width: 100%;
+     width: 30%;
+     height: 100%;
+     float: left;
  }
 
  .container {
-     width: 100vw;
-     height: 100vh;
-     display: grid;
-     grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
-     grid-template-columns: repeat(12, 1fr);
-     margin: auto;
-     margin-top: 0;
-     grid-row-gap: 2%;
+     top: 20%;
+     bottom: 10%;
+     left: 40%;
+     overflow: scroll;
+    right: 0;
  }
 
  footer {
-     grid-column: 3/11;
-     grid-row: 4/5;
+     top: 90%;
+     bottom: 0;
+     width: 100%;
+     background-color: #3093d4;
+     color: white;
+     font-size: 120%;
+    border:2px solid #E9ECF4;
  }
-
- .titulo {
-     grid-row: 2/3;
- }
-
- .secciones {
-     grid-column: 3/11;
-     grid-row: 3/4;
-     display: grid;
-     grid-template-columns: repeat(3, 4fr);
-     grid-template-rows: repeat(3, 1fr);
- }
-
- .data {
-     grid-column: 1/2;
-     grid-row: 1/4;
- }
-
- .Tabla {
+ .seccion-1 {
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-     border: 1px solid black;
      width: 90%;
-     grid-column: 1/2
  }
-
- .graphic {
-     grid-column: 2/4;
-     grid-row: 2/4;
- }
-
- .statics-Table {
-     grid-column: 2/4;
+.Tabla, .statics-Table{
+    border: 1px solid black;
+}
+.Tabla{
+    width: 60%;
+    text-align:center;
+}
+.statics-Table{
+    width: 80%;
+    margin-top: 20%;
+}
+ .seccion-3{
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-     border: 1px solid black;
      margin: 0 10% 10% 10%;
  }
-
- /*RESPONSIVE*/
+ .show1, .show2, .show3{
+     display:none;
+ }
+ .data-section{
+     height: 100%;
+     width: 100%;
+ }
 
  @media(max-width:770px) {
-     .checkbox:checked~.label-menu {
-         left: 50%;
+     .chart-statics button {
+         width: 30%;
+         margin-right: 0;
      }
-     .content-form {
-         width: 50%;
-         left: -50%;
+     .icono {
+         margin: 0;
      }
-     .secciones {
-        display: block;
+}
+@media(max-width:500px){
+    .chart-statics{
+        width: 100%;
+        left: 0;
     }
-    .Tabla, .graphic,.statics-Table {
-    text-align: center;
-    max-width: 100%;
+    .text-prev{
+        left: 0;
     }
- }
+    .content-form{
+        width: 100%;
+        height: 60%;
+        top:30%;
+    }
+    .container {
+        width: 100%;
+        top:60%;
+        height: 50%;
+    }
 
- @media(max-width:600px) {
-     .checkbox:checked~.label-menu {
-         left: 60%;
-     }
-     .content-form {
-         width: 60%;
-         left: -60%;
-     }
- }
-
- @media(max-width:400px) {
-     .checkbox:checked~.label-menu {
-         left: 80%;
-     }
-     .content-form {
-         width: 80%;
-         left: -80%;
-     }
- }
+}

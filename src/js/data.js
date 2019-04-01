@@ -1,38 +1,30 @@
-window.bank = {
+window.DATABANK = {
   getUniqueCountry: (data) => {
     let arrUniqueCountry = [];
     arrUniqueCountry = Object.keys(data);
     return arrUniqueCountry;
   },
-  arrayOfIndicators: (countryToexample, dta) => {       //retorna un array que contiene todos los indicadores por pais.
+  arrayOfIndicators: (dta) => {       //retorna un array que contiene todos los indicadores comunes en paises de  la data.
     let countries = Object.keys(dta);
-    let datos = "";
-    for (let j = 0; j < countries.length; j++) {
-      if (countries[j] == countryToexample) {
-        datos = dta[countries[j]];
-      }
-    }
-    let arrayOfobject = Object.keys(datos);
-    let indicatorsOfArray = datos[arrayOfobject[0]];
     let array = [];
-    for (let n = 0; n < indicatorsOfArray.length; n++) {
-      let arrindicators = indicatorsOfArray[n];
-      array.push(arrindicators['indicatorName']);
-    }
-    return array.sort();
+    countries.forEach(function (element) {
+      let indicatorsOfArray = dta[element]["indicators"];
+      for (let n = 0; n < indicatorsOfArray.length; n++) {
+        array.push(indicatorsOfArray[n]['indicatorName']);        //array con todos los indiccadores comunes 
+      }
+    });
+    let arr2 = [];
+    array.forEach(function (element) {            //hallando ind. comunes en los 4 paises y llenando en un array
+      for (let i = array.indexOf(element) + 1; i < array.length; i++) {
+        if (array[i] == element) {
+          arr2.push(element);
+        }
+      }
+    });
+    let diferente = [...new Set(arr2)];       //eliminando repeticion luego de encontrar los que son comunes para todos
+    return diferente.sort();
   },
 
-  objectOfdata: (country, indicador, dat) => {   //recibe como parametros un pais y un indicador, y retorna la data correspondiente 
-    let arrIndicator = bank.arrayOfIndicators(country, dat)
-    let arrResult = dat[country]["indicators"];
-    let objResult = [];
-    for (let i = 0; i < arrIndicator.length; i++) {
-      if (arrIndicator[i] == indicador) {
-        objResult = arrResult[i]["data"];
-      }
-    }
-    return objResult;
-  },
   paisSelected: (names) => {
     let arrPaises = document.getElementsByName(names);
     let seleccion = "";
@@ -43,46 +35,43 @@ window.bank = {
       }
     }
   },
-  arrValuesSelect: (arrSelect,countrySelect,indicatorSelect,data) => {
-    let objData = bank.objectOfdata(countrySelect, indicatorSelect,data )
-    let newArr=[];
-    for (let j = 0; j < arrSelect.length; j++) {
-      if (objData[arrSelect[j]] !== "") {
-          newArr.push(objData[arrSelect[j]])
+  filterData: (country, indicador, dat, by) => {   //recibe como parametros un pais y un indicador, y retorna la data correspondiente 
+    //let arrIndicator = bank.arrayOfIndicators(dat)
+    let arrResult = dat[country]["indicators"];
+    let objResult = [];
+    for (let i = 0; i < arrResult.length; i++) {
+      if (arrResult[i]["indicatorName"] === indicador) {
+        objResult = arrResult[i][by];
       }
     }
-    return newArr;
+    return objResult;
   },
-  intervalYears: (idFrom, idTo,pais,indicador,data) => {
-    let obj = bank.objectOfdata( pais, indicador,data);
+  intervalYears: (idFrom, idTo, obj) => {
     let From = parseInt(document.getElementById(idFrom).value);
-    let To= parseInt(document.getElementById(idTo).value);
+    let To = parseInt(document.getElementById(idTo).value);
     let arrYears = [];
     for (let i = From + 1960; i <= To + 1960; i++) {
       arrYears.push(i);
     }
-    let arrYearsNew=[];
-    arrYears.forEach(function(element){
-      if(obj[element]!==""){
+    let arrYearsNew = [];
+    arrYears.forEach(function (element) {
+      if (obj[element] !== "") {
         arrYearsNew.push(element);
       }
     });
     return arrYearsNew;
   },
-  arrValues: (idpais, idindicador) => {   
-    let countrySelect = bank.paisSelected(idpais);
-    let indicatorSelect = document.getElementById(idindicador).value;
-    let objDtaAll = bank.objectOfdata(countrySelect, indicatorSelect, WORLDBANK);
-    let arrData = Object.keys(objDtaAll);
+
+  arrValues: (objSelect, yearsSelect) => {   //retorna los valores correspondientes al año y el indicador seleccionado por el usuario
     let valores = [];
-    for (let i = 0; i < arrData.length; i++) {
-      valores.push(objDtaAll[arrData[i]]);
+    for (let i = 0; i < yearsSelect.length; i++) {
+      valores.push(objSelect[yearsSelect[i]]);
     }
     return valores;
   },
-  roundTwo:(numero)=>{
-    var flotante = parseFloat(numero);
-    var resultado = Math.round(flotante*1000)/1000;
+  roundN: (number, n) => {    //n es el numero de decimales al que se quiere redondear
+    var flotante = parseFloat(number);
+    var resultado = Math.round(flotante * Math.pow(10, n)) / Math.pow(10, n);
     return resultado;
-    }
+  }
 };

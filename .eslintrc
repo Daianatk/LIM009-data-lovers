@@ -9,7 +9,8 @@
   "globals": {
     "example": false,
     "WORLDBANK":false,
-    "bank":false,
-    "Chart":false
+    "DATABANK":false,
+    "Chart":false,
+    "Set":true
   }
 }
