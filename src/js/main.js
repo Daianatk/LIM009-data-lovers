@@ -1,16 +1,16 @@
 
-const FunctionsAdd = {
-    paisSelected: (names) => {
+const FunctionsAdd={
+     paisSelected: (names) => {
         let arrPaises = document.getElementsByName(names);
         let seleccion = "";
         for (let i = 0; i < arrPaises.length; i++) {
-            if (arrPaises[i].checked == true) {
-                seleccion = arrPaises[i].value;
-                return seleccion;
-            }
+          if (arrPaises[i].checked == true) {
+            seleccion = arrPaises[i].value;
+            return seleccion;
+          }
         }
-    },
-    intervalYears: (idFrom, idTo, obj) => {
+      },
+     intervalYears: (idFrom, idTo, obj) => {
         let From = parseInt(document.getElementById(idFrom).value);
         let To = parseInt(document.getElementById(idTo).value);
         let arrYears = [];
@@ -62,7 +62,7 @@ const generateYears = (obj) => {
     }
     return optionYears;
 };
-let objectExample = DATABANK.filterData("MEX", "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)", WORLDBANK, "data");
+let objectExample = DATABANK.filterData("MEX", "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)", WORLDBANK,"data");
 const selectYearsFrom = document.getElementById("Age-1");
 selectYearsFrom.innerHTML = generateYears(objectExample);
 const selectYearsTwo = document.getElementById("Age-2");
