@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="utf-8">
   <title>Data WorldBank</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 </head>
 <body>
   <header class="titulo margen-auto position-fixed">
-    <img class="logo" alt="Logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2_x76wYrMGeNkFOPGEO8F4g97Oq74-ebN3BOCGjmw8V9sy3qMgQ">
+    <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2_x76wYrMGeNkFOPGEO8F4g97Oq74-ebN3BOCGjmw8V9sy3qMgQ">
   </header>
   <nav class="chart-statics position-fixed">
     <button type="button" class="stactics margen-auto" id="SeeStatics"><i
-        class="fas fa-chart-bar icono"></i>Estadísticos</button>
+        class="fas fa-chart-bar icono"></i><a>Estadísticos</a></button>
     <button type="button" class="graph  margen-auto" id="SeeGraphic"><i
-        class="fas fa-chart-line icono"></i>Graficar</button>
-    <button type="button" class="filtrar margen-auto" id="filter"><i class="fas fa-database icono"></i>Ver
-        Datos</button>
+        class="fas fa-chart-line icono"></i><a>Graficar</a></button>
+    <button type="button" class="filtrar margen-auto" id="filter"><i class="fas fa-database icono"></i><a>Ver
+        Datos</a></button>
   </nav>
   <div class="menu">
     <div class="text-prev position-fixed">
@@ -39,14 +43,16 @@
           <label class="to  margen-auto">Hasta:</label>
           <select id="Age-2" class="toAges colum2 years margen-auto"></select>
         </div>
+
       </form>
     </div>
   </div>
+
   <div class="container position-fixed">
     <main class="secciones" >
       <section class="seccion-1" id="seccion-1">
         <div class="data margen-auto data-section" id="sectionDta">
-          <table id="tabla" class="Tabla margen-auto"></table>
+          <table type="table" id="tabla" class="Tabla margen-auto"></table>
         </div>
       </section>
       <section class="seccion-2 margen-auto data-section" id="seccion-2">
@@ -65,10 +71,11 @@
     <div class="contenedorFooter">
       <p class="copy">Copyright &copy; 2019 Todos los derechos reservados</p>
       <div class="sociales">
-        <a class="fontawesome-facebook-sign" href="https://es-la.facebook.com/"></a>
-        <a class="fontawesome-twitter" href="https://twitter.com/?lang=es"></a>
-        <a class="fontawesome-camera-retro" href="https://www.instagram.com/?hl=es-la"></a>
-        <a class="fontawesome-google-plus-sign" href="https://aboutme.google.com/u/0/?referer=gplus"></a>
+
+        <a class="fontawesome-facebook-sign" href="#"></a>
+        <a class="fontawesome-twitter" href="#"></a>
+        <a class="fontawesome-camera-retro" href="#"></a>
+        <a class="fontawesome-google-plus-sign" href="#"></a>
       </div>
     </div>
   </footer>
@@ -78,4 +85,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
  <script src="js/graphic.js"></script>
  </body>
+
 </html>

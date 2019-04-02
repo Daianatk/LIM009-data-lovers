@@ -10,16 +10,17 @@ const input =
           '2014': 24.2099990844727,
           '2015': 21.6800003051758,
           '2016': 23.7399997711182,
-          '2017': 23.7600002288818
+          '2017': 23.7600002288818,
         },
         'countryName': 'Perú',
         'countryCode': 'PER',
-        'indicatorName': 'Empleo de tiempo parcial mujeres (% del total de mujeres empleadas)',
-        'indicatorCode': 'SL.TLF.PART.FE.ZS'
+        'indicatorName': 'Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)',
+        'indicatorCode': 'SL.TLF.PART.FE.ZS',
       }],
     'dataSource': 'Indicadores del desarrollo mundial',
-    'lastUpdated': '2018-11-14'
+    'lastUpdated': '2018-11-14',
   },
+
   'MEX': {
     'indicators': [
       {
@@ -37,13 +38,14 @@ const input =
     'dataSource': 'Indicadores del desarrollo mundial',
     'lastUpdated': '2018-11-14'
   },
+
   'BRA': {
     'indicators': [
       {
         'data': {
-          '2014': 0,
+          '2014': '',
           '2015': 0,
-          '2016': 0,
+          '2016': '',
           '2017': 0
         },
         'countryName': 'Brasil',
@@ -54,6 +56,7 @@ const input =
     'dataSource': 'Indicadores del desarrollo mundial',
     'lastUpdated': '2018-11-14'
   },
+
   'CHL': {
     'indicators': [
       {
@@ -72,10 +75,10 @@ const input =
     'lastUpdated': '2018-11-14'
   }
 };
+
 const output1 = ['PER', 'MEX', 'BRA', 'CHL'];
-const output2 = ['Empleo de tiempo parcial mujeres (% del total de mujeres empleadas)', 'La ley exige igualdad de remuneración para hombres y mujeres por trabajo de igual valor (1=sí; 0=no)', 'La ley exige igualdad de remuneración para hombres y mujeres por trabajo de igual valor (1=sí; 0=no)', 'Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)'];
-const output3 = ['2014:24.2099990844727', '2015:21.6800003051758', '2016:23.7399997711182', '2017:23.7600002288818'];
-const output4 = ['24.2099990844727', '21.6800003051758', '23.7399997711182', '23.7600002288818'];
+const output2 = ['Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)', 'La ley exige igualdad de remuneración para hombres y mujeres por trabajo de igual valor (1=sí; 0=no)', 'Prevalencia de anemia entre mujeres no embarazadas (% de mujeres entre 15-49 años)',];
+const output3 = { '2014': 24.2099990844727, '2015': 21.6800003051758, '2016': 23.7399997711182, '2017': 23.7600002288818 };
 
 describe('DATABANK', () => {
   it('debería ser un objeto', () => {
@@ -96,7 +99,7 @@ describe('DATABANK', () => {
     it('debería ser una función', () => {
       expect(typeof DATABANK.arrayOfIndicators).toBe('function');
     });
-    it('debería retornar ["Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)", "La ley exige igualdad de remuneración para hombres y mujeres por trabajo de igual valor (1=sí; 0=no)","La ley exige igualdad de remuneración para hombres y mujeres por trabajo de igual valor (1=sí; 0=no)","Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)"]', () => {
+    it('debería retornar "[ "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)","La ley exige igualdad de remuneración para hombres y mujeres por trabajo de igual valor (1=sí; 0=no)","Prevalencia de anemia entre mujeres no embarazadas (% de mujeres entre 15-49 años)"]"', () => {
       expect(DATABANK.arrayOfIndicators(input)).toEqual(output2);
     });
     it('debería retornar un nuevo array', () => {
@@ -107,16 +110,11 @@ describe('DATABANK', () => {
     it('debería ser una función', () => {
       expect(typeof DATABANK.filterData).toBe('function');
     });
-    it('debería retornar ["2014:24.2099990844727", "2015:21.6800003051758", "2016:23.7399997711182", "2017:23.7600002288818"]', () => {
-      expect(DATABANK.filterData(input)).toEqual(output3);
+    it('debería retornar un objeto', () => {
+      expect(DATABANK.filterData('PER', 'Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)', input, 'data')).toEqual(output3);
     });
-  });
-  describe('roundN', () => {
-    it('debería ser una función', () => {
-      expect(typeof DATABANK.roundN).toBe('function');
-    });
-    it('debería retornar ["24.21", "21.68", "23.74", "23.76"]', () => {
-      expect(DATABANK.roundN(input)).toEqual(output4);
+    it('debería retornar un objeto', () => {
+      expect(DATABANK.filterData('PER', 'Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)', input, 'data')).not.toBe(output3);
     });
   });
 });
