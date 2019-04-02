@@ -89,26 +89,13 @@ Tus Pruebas Unitarias deben dar una cobertura del 70% de _statements_ (_sentenci
 del archivo `src/data.js` que contenga tus Funciones y está detallado en la
 sección [Data](###data) de las [Especificaciones Técnicas](##especificaciones-técnicas).
 
-## Parte Opcional (Hacker edition)
-
-Features/características extra sugeridas:
-
-* En lugar de consumir la data estática brindada en este repositorio, puedes
-  consumir la data de forma dinámica, cargando un archivo JSON por medio de
-  `fetch`. La carpeta `src/data` contiene una versión `.js` y una `.json` de
-  de cada set datos.
-* Agregarle a tu interfaz de usuario implementada visualizaciones gráficas. Para
-  ello te recomendamos explorar librerías de gráficas como [Chart.js](https://www.chartjs.org/)
-  o [Google Charts](https://developers.google.com/chart/).
-* 100% Coverage
-
 ## Checklist
 
 * [-] Usa VanillaJS.
 * [-] No hace uso de `this`.
-* [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
+* [-] Pasa linter (`npm run pretest`)
+* [-] Pasa tests (`npm test`)
+* [-] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
 * [-] Incluye _Definición del producto_ clara e informativa en `README.md`.
 * [-] Incluye historias de usuario en `README.md`.
@@ -117,9 +104,9 @@ Features/características extra sugeridas:
 * [-] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
 * [-] Incluye link a Zeplin en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
+* [-] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
+* [-] UI: Muestra lista y/o tabla con datos y/o indicadores.
+* [-] UI: Permite ordenar data por uno o más campos (asc y desc).
+* [-] UI: Permite filtrar data en base a una condición.
 * [-] UI: Es _responsive_.
