@@ -36720,4 +36720,4 @@ const WORLDBANK = {
     "lastUpdated": "2018-11-14"
   }
 }
-;;
+;

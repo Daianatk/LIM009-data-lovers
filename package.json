@@ -13,8 +13,9 @@
     "chai": "^4.2.0",
     "eslint": "^5.9.0",
     "eslint-plugin-jest": "^22.1.2",
-    "htmlhint": "^0.10.1",
-    "jest": "^24.5.0",
-    "mocha": "^5.2.0"
+    "htmlhint": "^0.10.1"
+  },
+  "devDependencies": {
+    "jest": "^24.5.0"
   }
 }
