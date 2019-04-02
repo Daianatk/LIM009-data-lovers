@@ -10,7 +10,7 @@ window.DATABANK = {
     countries.forEach(function (element) {
       let indicatorsOfArray = dta[element]["indicators"];
       for (let n = 0; n < indicatorsOfArray.length; n++) {
-        array.push(indicatorsOfArray[n]['indicatorName']);        //array con todos los indiccadores comunes 
+        array.push(indicatorsOfArray[n]['indicatorName']);        //array con todos los indiccadores 
       }
     });
     let arr2 = [];
@@ -35,10 +35,4 @@ window.DATABANK = {
     }
     return objResult;
   },
-
-  roundN: (number, n) => {    //n es el numero de decimales al que se quiere redondear
-    var flotante = parseFloat(number);
-    var resultado = Math.round(flotante * Math.pow(10, n)) / Math.pow(10, n);
-    return resultado;
-  }
 };
