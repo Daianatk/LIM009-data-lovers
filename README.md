@@ -154,6 +154,10 @@ Test 1 - Resultados
 
 Test 2 - Resultados
 
+![image](https://github.com/MAYTESI/LIM009-data-lovers/blob/master/src/img/test3.png)
+
+Test 3 - Resultados
+
 ## Checklist
 
 * [-] Usa VanillaJS.
