@@ -1,81 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Data WorldBank</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="fonts/style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<title>Data WorldBank</title>
 </head>
 <body>
-  <header class="titulo margen-auto position-fixed">
-    <img class="logo" alt="Logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2_x76wYrMGeNkFOPGEO8F4g97Oq74-ebN3BOCGjmw8V9sy3qMgQ">
-  </header>
-  <nav class="chart-statics position-fixed">
-    <button type="button" class="stactics margen-auto" id="SeeStatics"><i
-        class="fas fa-chart-bar icono"></i>Estadísticos</button>
-    <button type="button" class="graph  margen-auto" id="SeeGraphic"><i
-        class="fas fa-chart-line icono"></i>Graficar</button>
-    <button type="button" class="filtrar margen-auto" id="filter"><i class="fas fa-database icono"></i>Ver
-        Datos</button>
-  </nav>
-  <div class="menu">
-    <div class="text-prev position-fixed">
-      <h2> Vista preliminar:</h2><a class="clear" id="borrar">(Borrar selección)</a>
-    </div>
-    <div class="content-form position-fixed">
-      <form class="form1 colum1 margen-auto" id="form1">
-        <h2 class="text-justificy">Banco de datos:</h2>
-        <select id="List" class="list-indicadores col-All margen-auto">
-        </select>
-        <div class="opciones cuadro colum1 margen-auto">
-          <h3 class="label2 row-1 columAll">Seleccione un Pais</h3>
-          <div id="paises" class="paises margen-auto"></div>
-        </div>
-        <div class="date cuadro colum2 margen-auto">
-          <h3 class="label3 row-1 columAll">Seleccione los años</h3>
-          <label class="from  margen-auto">Desde:</label>
-          <select id="Age-1" class="fromAges colum2 years margen-auto"></select>
-          <label class="to  margen-auto">Hasta:</label>
-          <select id="Age-2" class="toAges colum2 years margen-auto"></select>
-        </div>
-      </form>
-    </div>
-  </div>
-  <div class="container position-fixed">
-    <main class="secciones" >
-      <section class="seccion-1" id="seccion-1">
-        <div class="data margen-auto data-section" id="sectionDta">
-          <table id="tabla" class="Tabla margen-auto"></table>
-        </div>
-      </section>
-      <section class="seccion-2 margen-auto data-section" id="seccion-2">
-        <div class="graphic">
-          <canvas id="line-chart"></canvas>
-        </div>
-      </section>
-      <section class="seccion-3 margen-auto data-section" id="seccion-3">
-        <div class=" row-1">
-          <table class="statics-Table" id="staticsTable"></table>
-        </div>
-      </section>
-    </main>
-  </div>
-  <footer class="position-fixed">
-    <div class="contenedorFooter">
-      <p class="copy">Copyright &copy; 2019 Todos los derechos reservados</p>
-      <div class="sociales">
-        <a class="fontawesome-facebook-sign" href="https://es-la.facebook.com/"></a>
-        <a class="fontawesome-twitter" href="https://twitter.com/?lang=es"></a>
-        <a class="fontawesome-camera-retro" href="https://www.instagram.com/?hl=es-la"></a>
-        <a class="fontawesome-google-plus-sign" href="https://aboutme.google.com/u/0/?referer=gplus"></a>
-      </div>
-    </div>
-  </footer>
-  <script src="data/worldbank/worldbank.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
- <script src="js/graphic.js"></script>
- </body>
+	<div class="contenedor">
+		<header class="header">
+			<img class="logo" alt="Logo" src="img/titulo.jpg">
+		</header>
+		<main class="contenido">
+				<form class="form1 colum1 margen-auto" id="form1">
+					<h2 class="text-justificy">Banco de datos:</h2>
+					<select id="List" class="list-indicadores col-All margen-auto">
+					</select>
+					<div class="opciones cuadro colum1 margen-auto">
+						<h3 class="label2 row-1 columAll margen-auto">Seleccione un Pais</h3>
+						<div id="paises" class="paises margen-auto"></div>
+					</div>
+					<div class="date cuadro colum2 margen-auto">
+						<h3 class="label3 row-1 columAll margen-auto">Seleccione los años</h3>
+						<label class="from  margen-auto">Desde:</label>
+						<select id="Age-1" class="fromAges colum2 years margen-auto"></select>
+						<label class="to  margen-auto">Hasta:</label>
+						<select id="Age-2" class="toAges colum2 years margen-auto"></select>
+					</div>
+				</form>
+		</main>
+		<aside class="sidebar">
+			<button type="button" class="stactics" id="SeeStatics"><i class="fas fa-chart-bar icono"></i> Estadísticos</button>
+			<button type="button" class="graph" id="SeeGraphic"><i class="fas fa-chart-line icono"></i> Graficar</button>
+			<button type="button" class="filtrar" id="filter"><i class="fas fa-database icono"></i> Ver Datos</button>
+		</aside>
+		<div class="menu text-prev">
+			<h2> Vista preliminar:</h2><a class="clear" id="borrar">(Borrar selección)</a>
+		</div>
+		<div class="mostrar">
+			<main class="secciones">
+				<section class="secc-1" id="seccion-1">
+					<div class="data margen-auto" id="sectionDta">
+						<table type="table" id="tabla" class="Tabla margen-auto"></table>
+					</div>
+				</section>
+				<section class="secc-2 margen-auto" id="seccion-2">
+					<div class="graphic">
+						<canvas id="line-chart"></canvas>
+					</div>
+				</section>
+				<section class="secc-3 margen-auto" id="seccion-3">
+					<div class=" row-1">
+						<table class="statics-Table margen-auto" id="staticsTable"></table>
+					</div>
+				</section>
+			</main>
+		</div>
+		<footer class="footer">
+			<p class="copy">Copyright &copy; 2019 Todos los derechos reservados</p>
+			<div class="sociales">
+				<span class="icon-facebook" href="https://es-la.facebook.com/"></span>
+				<span class="icon-twitter" href="https://twitter.com/?lang=es"></span>
+				<span class="icon-instagram" href="https://www.instagram.com/?hl=es-la"></span>
+				<span class="icon-google" href="https://aboutme.google.com/u/0/?referer=gplus"></span>
+			</div>
+		</footer>
+	</div>
+	<script src="data/worldbank/worldbank.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+	<script src="js/graphic.js"></script>
+</body>
 </html>
