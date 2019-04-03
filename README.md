@@ -30,7 +30,7 @@ b.	Funcionalidad:
 -    Mostrar los indicadores dentro de una Lista en HTML en la cual el usuario seleccione el índice que desea ver, y esta se muestre en el contenido de la web como un título.
  
 c. 	Estructura HTML:
--     Dentro del body crear un header con un contenedor para insertar una imagen e implementar el menú en esta zona si se estipula necesario.
+-     Dentro del body crear un header con un contenedor para insertar una imagen.
 -     Crear un banner para insertar una imagen.
 -     Crear un contenedor y un formulario para implementar el elemento lista dentro del body.
 -     Dentro del contenido de la web se mostrará el título del indicador elegido
@@ -132,12 +132,13 @@ Prototipo de Baja Fidelidad realizado en Excel.
 
 #### Prototipo de alta fidelidad
 
-![image](https://github.com/Daianatk/LIM009-data-lovers/blob/master/src/img/figma-mobile-dataworldbank.JPG)
+![image](https://github.com/Daianatk/LIM009-data-lovers/blob/master/src/img/figma-mobile-dataworldbank.jpg)
 
 Prototipo de Alta Fidelidad realizado en Figma para Mobile.
 Link en Zeplin: https://zpl.io/2GyXRgm
 
-![image](https://github.com/Daianatk/LIM009-data-lovers/blob/master/src/img/figma-mobile-dataworldbank.jpg)
+![image](https://github.com/Daianatk/LIM009-data-lovers/blob/master/src/img/figma-desktop-dataworldbank.jpg)
+
 Prototipo de Alta Fidelidad realizado en Figma para Desktop.
 Link en Zeplin: https://zpl.io/bJ7XxN3
 
@@ -146,9 +147,11 @@ Link en Zeplin: https://zpl.io/bJ7XxN3
 Se realizo las respectivas pruebas realizadas con Jes.
 
 ![image](https://github.com/Daianatk/LIM009-data-lovers/blob/master/src/img/test2.JPG)
+
 Test 1 - Resultados
 
 ![image](https://github.com/Daianatk/LIM009-data-lovers/blob/master/src/img/test1.JPG)
+
 Test 2 - Resultados
 
 ## Checklist
