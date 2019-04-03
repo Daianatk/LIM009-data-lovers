@@ -4,7 +4,7 @@
   
   <meta charset="utf-8">
   <title>Data WorldBank</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
   <link rel="stylesheet" href="css/style.css">
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -13,26 +13,23 @@
 </head>
 <body>
   <header class="titulo margen-auto position-fixed">
-    <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2_x76wYrMGeNkFOPGEO8F4g97Oq74-ebN3BOCGjmw8V9sy3qMgQ">
+    <img alt="Cargano imagen" class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2_x76wYrMGeNkFOPGEO8F4g97Oq74-ebN3BOCGjmw8V9sy3qMgQ">
   </header>
   <nav class="chart-statics position-fixed">
-    <button type="button" class="stactics margen-auto" id="SeeStatics"><i
-        class="fas fa-chart-bar icono"></i><a>Estadísticos</a></button>
-    <button type="button" class="graph  margen-auto" id="SeeGraphic"><i
-        class="fas fa-chart-line icono"></i><a>Graficar</a></button>
-    <button type="button" class="filtrar margen-auto" id="filter"><i class="fas fa-database icono"></i><a>Ver
-        Datos</a></button>
+    <button type="button" class="stactics margen-auto" id="SeeStatics"><i class="fas fa-chart-bar icono"></i>Estadísticos</button>
+    <button type="button" class="graph  margen-auto" id="SeeGraphic"><i class="fas fa-chart-line icono"></i>Graficar</button>
+    <button type="button" class="filtrar margen-auto" id="filter"><i class="fas fa-database icono"></i>Ver Datos</button>
   </nav>
   <div class="menu">
     <div class="text-prev position-fixed">
       <h2> Vista preliminar:</h2><a class="clear" id="borrar">(Borrar selección)</a>
     </div>
     <div class="content-form position-fixed">
-      <form class="form1 colum1 margen-auto" id="form1">
+      <form class="form1 margen-auto" id="form1">
         <h2 class="text-justificy">Banco de datos:</h2>
         <select id="List" class="list-indicadores col-All margen-auto">
         </select>
-        <div class="opciones cuadro colum1 margen-auto">
+        <div class="opciones cuadro margen-auto">
           <h3 class="label2 row-1 columAll">Seleccione un Pais</h3>
           <div id="paises" class="paises margen-auto"></div>
         </div>
@@ -52,7 +49,7 @@
     <main class="secciones" >
       <section class="seccion-1" id="seccion-1">
         <div class="data margen-auto data-section" id="sectionDta">
-          <table type="table" id="tabla" class="Tabla margen-auto"></table>
+          <table id="tabla" class="Tabla margen-auto"></table>
         </div>
       </section>
       <section class="seccion-2 margen-auto data-section" id="seccion-2">
