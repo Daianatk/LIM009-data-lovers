@@ -99,7 +99,7 @@ describe('DATABANK', () => {
     it('debería ser una función', () => {
       expect(typeof DATABANK.arrayOfIndicators).toBe('function');
     });
-    it('debería retornar [ "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)"]', () => {
+    it('debería retornar "[ "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)"]"', () => {
       expect(DATABANK.arrayOfIndicators(input)).toEqual(output2);
     });
     it('debería retornar un nuevo array', () => {
