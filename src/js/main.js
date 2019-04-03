@@ -1,16 +1,16 @@
 
-const FunctionsAdd={ //Selecciona el pais segun las opciones de los radios buton
-     paisSelected: (names) => {
+const FunctionsAdd = { //Selecciona el pais segun las opciones de los radios buton
+    paisSelected: (names) => {
         let arrPaises = document.getElementsByName(names);
         let seleccion = "";
         for (let i = 0; i < arrPaises.length; i++) {
-          if (arrPaises[i].checked == true) { //Permite alternar el contenido segun la accion
-            seleccion = arrPaises[i].value;
-            return seleccion;
-          }
+            if (arrPaises[i].checked == true) { //Permite alternar el contenido segun la accion
+                seleccion = arrPaises[i].value;
+                return seleccion;
+            }
         }
-      },
-     intervalYears: (idFrom, idTo, obj) => { //Evalua entre los dos años seleccionados y los devuelve
+    },
+    intervalYears: (idFrom, idTo, obj) => { //Evalua entre los dos años seleccionados y los devuelve
         let From = parseInt(document.getElementById(idFrom).value); //Devuelve un elemento entero de un tipo cadena
         let To = parseInt(document.getElementById(idTo).value); //Retorna un elemento especifico
         let arrYears = [];
@@ -25,12 +25,12 @@ const FunctionsAdd={ //Selecciona el pais segun las opciones de los radios buton
         });
         return arrYearsNew;
     },
- roundN: (number, n) => {    //n es el numero de decimales al que se quiere redondear
+    roundN: (number, n) => {    //n es el numero de decimales al que se quiere redondear
         var flotante = parseFloat(number);
         var resultado = Math.round(flotante * Math.pow(10, n)) / Math.pow(10, n); //Redondea al entero mas cercano
         return resultado;
     }
-}
+};
 
 const List_indicators = document.getElementById("List"); //Devuelve indicador de la lista seleccionada
 const generateList = (arreglo) => {
@@ -52,9 +52,9 @@ const printCountries = (countries) => {
     return pais;
 };
 
-listCountries.innerHTML = printCountries(DATABANK.getUniqueCountry(WORLDBANK)); 
+listCountries.innerHTML = printCountries(DATABANK.getUniqueCountry(WORLDBANK));
 
-const generateYears = (obj) => { 
+const generateYears = (obj) => {
     let arrayYears = Object.keys(obj);
     let optionYears = 0;
     for (let i = arrayYears[0]; i <= arrayYears[arrayYears.length - 1]; i++) {
@@ -62,7 +62,7 @@ const generateYears = (obj) => {
     }
     return optionYears;
 };
-let objectExample = DATABANK.filterData("MEX", "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)", WORLDBANK,"data");
+let objectExample = DATABANK.filterData("MEX", "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)", WORLDBANK, "data");
 const selectYearsFrom = document.getElementById("Age-1");
 selectYearsFrom.innerHTML = generateYears(objectExample);
 const selectYearsTwo = document.getElementById("Age-2");

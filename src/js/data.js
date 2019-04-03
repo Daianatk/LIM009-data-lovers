@@ -10,7 +10,8 @@ window.DATABANK = {
     countries.forEach(function (element) { //Ejecuta la funcion indicada una vez por elemento
       let indicatorsOfArray = dta[element]["indicators"];
       for (let n = 0; n < indicatorsOfArray.length; n++) {
-        array.push(indicatorsOfArray[n]['indicatorName']); //array con todos los indiccadores 
+        array.push(indicatorsOfArray[n]['indicatorName']);        //array con todos los indicadores 
+
       }
     });
     let arr2 = [];
@@ -26,8 +27,8 @@ window.DATABANK = {
   },
 
   filterData: (country, indicador, dat, by) => {   //recibe como parametros un pais y un indicador, y retorna la data correspondiente 
-    let arrResult = dat[country]["indicators"];
-    let objResult = [];
+    let arrResult = dat[country]['indicators'];
+    let objResult = "";
     for (let i = 0; i < arrResult.length; i++) {
       if (arrResult[i]["indicatorName"] === indicador) {
         objResult = arrResult[i][by];
