@@ -154,6 +154,10 @@ Test 1 - Resultados
 
 Test 2 - Resultados
 
+![image](https://github.com/Daianatk/LIM009-data-lovers/blob/master/src/img/test3.PNG)
+
+Test 3 - Resultados
+
 ## Checklist
 
 * [-] Usa VanillaJS.
