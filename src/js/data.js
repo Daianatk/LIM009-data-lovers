@@ -1,13 +1,13 @@
 window.DATABANK = {
   getUniqueCountry: (data) => {
     let arrUniqueCountry = [];
-    arrUniqueCountry = Object.keys(data);//Devuelve un array cuyos elementos son string
+    arrUniqueCountry = Object.keys(data);//Devuelve un array cuyos elementos string
     return arrUniqueCountry;
   },
   arrayOfIndicators: (dta) => {       //retorna un array que contiene todos los indicadores comunes en paises de  la data.
     let countries = Object.keys(dta);
     let array = [];
-    countries.forEach(function (element) { //Ejecuta la funcion indicada una vez por elemento
+    countries.forEach(function(element) { //Ejecuta la funcion indicada una vez por elemento
       let indicatorsOfArray = dta[element]["indicators"];
       for (let n = 0; n < indicatorsOfArray.length; n++) {
         array.push(indicatorsOfArray[n]['indicatorName']);        //array con todos los indicadores 
@@ -15,7 +15,7 @@ window.DATABANK = {
       }
     });
     let arr2 = [];
-    array.forEach(function (element) {            //hallando ind. comunes en los 4 paises y llenando en un array
+    array.forEach(function(element) {            //hallando ind. comunes en los 4 paises y llenando en un array
       for (let i = array.indexOf(element) + 1; i < array.length; i++) { //Retorna 1er indice segun el array
         if (array[i] == element) {
           arr2.push(element); //Añade uno o mas elementos al final del array y devuelve uno nuevo
@@ -36,4 +36,23 @@ window.DATABANK = {
     }
     return objResult;
   },
+  orderData:(arr)=>{
+    let number=0;
+    let arr2=[];
+    let arr3=[];
+    arr.forEach(function(element){
+      number=element.toString().length;
+      arr2.push(number);
+    })
+    let x=Math.max(...arr2);
+    let arrNew=arr.sort();
+   for(let i=10;i<=Math.pow(10,x);i=i*10){
+      for(let n=0;n<arr.length;n++){
+     if(arr[n]<i){    
+       arr3.push(arrNew[n]);
+     }
+   }
+  }
+  return [...new Set(arr3)];
+  }
 };

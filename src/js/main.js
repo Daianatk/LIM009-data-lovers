@@ -26,8 +26,8 @@ const FunctionsAdd = { //Selecciona el pais segun las opciones de los radios but
         return arrYearsNew;
     },
     roundN: (number, n) => {    //n es el numero de decimales al que se quiere redondear
-        var flotante = parseFloat(number);
-        var resultado = Math.round(flotante * Math.pow(10, n)) / Math.pow(10, n); //Redondea al entero mas cercano
+        let flotante = parseFloat(number);
+        let resultado = Math.round(flotante * Math.pow(10, n)) / Math.pow(10, n); //Redondea al entero mas cercano
         return resultado;
     }
 };
@@ -68,28 +68,56 @@ selectYearsFrom.innerHTML = generateYears(objectExample);
 const selectYearsTwo = document.getElementById("Age-2");
 selectYearsTwo.innerHTML = generateYears(objectExample);
 
-
-
-const genera_tabla = (idIndicator, idFrom, idTo, idShow, idCountry) => {
-    let indicatorSelected = document.getElementById(idIndicator).value;
-    let nameCountry = FunctionsAdd.paisSelected(idCountry);
-    let showData = DATABANK.filterData(nameCountry, indicatorSelected, WORLDBANK, "data");
-    let arrAños = FunctionsAdd.intervalYears(idFrom, idTo, showData);
+const generateTable = (arrYears, arrValues, nameCountry, nameLabel, idShow) => {
     const box = document.getElementById(idShow);
-    box.innerHTML = `<tr><caption>${nameCountry} : ${indicatorSelected}</caption></tr><tr><th>Año</th><th>Dato</th></tr>`;
-    arrAños.forEach(function (element) {
-        let convert = FunctionsAdd.roundN(showData[element], 3)
+    box.innerHTML = `<tr><caption>${nameCountry} : ${nameLabel}</caption></tr><tr><th>Año</th><th>Dato</th></tr>`;
+    arrYears.forEach(function (element, index) {
+        let convert = FunctionsAdd.roundN(arrValues[index], 3)
         box.innerHTML += `<tr><td> ${element}</td><td>${convert}</td><tr>`;
     });
-};
+}
 
-const generateTable = document.getElementById("filter");
-generateTable.addEventListener("click", function () {
+const print = () => {
     document.getElementById("seccion-1").style.display = "block";
     document.getElementById("seccion-2").style.display = "none";
     document.getElementById("seccion-3").style.display = "none";
-    return genera_tabla("List", "Age-1", "Age-2", "tabla", "countrySelect");
-});
+    let indicatorSelected = document.getElementById("List").value;
+    let nameCountry = FunctionsAdd.paisSelected("countrySelect");
+    let objData = DATABANK.filterData(nameCountry, indicatorSelected, WORLDBANK, "data");
+    let arrAños = FunctionsAdd.intervalYears("Age-1", "Age-2", objData);
+    let valores = [];
+    arrAños.forEach(function (element) {
+        valores.push(objData[element]);
+    })
+    return generateTable(arrAños, valores, nameCountry, indicatorSelected, "tabla");
+};
+const genTable = document.getElementById("filter");
+genTable.addEventListener("click", print);
+
+const printOrden = () => {
+    document.getElementById("secc-1-order").style.display = "block";
+    let nameIndicat = document.getElementById("List").value;
+    let nameCountry = FunctionsAdd.paisSelected("countrySelect");
+    let objData = DATABANK.filterData(nameCountry, nameIndicat, WORLDBANK, "data");
+    let arrAños = FunctionsAdd.intervalYears("Age-1", "Age-2", objData);
+    let valores = [];
+    let años = [];
+    arrAños.forEach(function (element) {
+        valores.push(objData[element]);
+    });
+      let values = DATABANK.orderData(valores);
+
+    for (let i = 0; i < arrAños.length; i++) {
+        arrAños.forEach(function (element) {
+            if (objData[element] == values[i]) {
+                años.push(element);
+            }
+    })
+}
+    return generateTable(años, values, nameCountry, nameIndicat, "tabla2");
+};
+const orderTable = document.getElementById("btn-ordenar");
+orderTable.addEventListener("click", printOrden);
 
 const generateStatics = (idtable, idCountry, idIndicator, idFrom, idTo) => {
     const tableOfStatics = document.getElementById(idtable);
