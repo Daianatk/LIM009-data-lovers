@@ -1,3 +1,12 @@
+function cargarJSON(){
+    fetch('data/worldbank/worldbank.json')
+    .then(resp=>{
+        return resp.json();
+    })
+    .then(data=>{
+        console.log(data);
+    })
+}
 
 const FunctionsAdd = { //Selecciona el pais segun las opciones de los radios buton
     paisSelected: (names) => {
